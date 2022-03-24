@@ -7,6 +7,6 @@
     A cinema web app build on Ruby on rails
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=iik25wqIuFo">View Demo</a>
   </p>
 </div>
