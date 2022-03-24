@@ -346,3 +346,315 @@ Migrating to DeviseCreateUsers (20220324170359)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToPosts (20220324173806)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "posts" ADD "user_id" reference[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220324173806"]]
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:42:35 +0100
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007fbd4c57d1e8 @set=#<ActionDispatch::Routing::RouteSet:0x0000559c292cd5d8>, @draw_paths=[#<Pathname:/home/hojnik/Documents/GitHub/BestMovieKolektion/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007fbd4c57d198 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000559c29215050 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:42:43 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:42:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:42:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts/1/edit" for 127.0.0.1 at 2022-03-24 18:42:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts/1/edit"):
+  
+Started GET "/posts/new" for 127.0.0.1 at 2022-03-24 18:42:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-24 18:42:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-24 18:43:51 +0100
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007fbd40418458 @set=#<ActionDispatch::Routing::RouteSet:0x0000559c292cd5d8>, @draw_paths=[#<Pathname:/home/hojnik/Documents/GitHub/BestMovieKolektion/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007fbd40418408 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000559c29215050 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-03-24 18:45:08 +0100
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x0000559c296103f8 @set=#<ActionDispatch::Routing::RouteSet:0x0000559c292cd5d8>, @draw_paths=[#<Pathname:/home/hojnik/Documents/GitHub/BestMovieKolektion/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x0000559c29610380 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000559c29215050 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-03-24 18:46:40 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1757)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 8493)
+Completed 200 OK in 33ms (Views: 20.3ms | ActiveRecord: 0.2ms | Allocations: 14120)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2022-03-24 18:46:41 +0100
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 17.2ms | Allocations: 4903)
+  Rendered posts/new.html.erb within layouts/application (Duration: 21.3ms | Allocations: 5337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 8461)
+Completed 200 OK in 49ms (Views: 32.5ms | ActiveRecord: 1.2ms | Allocations: 12858)
+
+
+Started POST "/posts" for 127.0.0.1 at 2022-03-24 18:46:52 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Marcelino kruh in vino pravi čudeš marcelino", "body"=>"w"}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.5ms | Allocations: 1362)
+  Rendered posts/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1483)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4491)
+Completed 422 Unprocessable Entity in 29ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8413)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2022-03-24 18:47:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-24 18:47:18 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 262)
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 604)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 3738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 6871)
+Completed 200 OK in 45ms (Views: 29.7ms | ActiveRecord: 1.9ms | Allocations: 12668)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-03-24 18:47:26 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zanluka.hojnik11@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "zanluka.hojnik11@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "zanluka.hojnik11@gmail.com"], ["encrypted_password", "$2a$12$2epSYgjZm39hxRTk5OtWDuAyx7GlLLB11fvOcm1x447NX/Y7ER.sq"], ["created_at", "2022-03-24 17:47:26.749403"], ["updated_at", "2022-03-24 17:47:26.749403"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 366ms (ActiveRecord: 12.2ms | Allocations: 12455)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-24 18:47:26 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3807)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 4339)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2022-03-24 18:47:28 +0100
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 3.4ms | Allocations: 763)
+  Rendered posts/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4389)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 4868)
+
+
+Started POST "/posts" for 127.0.0.1 at 2022-03-24 18:47:30 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Marcelino kruh in vino pravi čudeš marcelino", "body"=>"okej deli"}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `block in create'
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Marcelino kruh in vino pravi čudeš marcelino"], ["body", "okej deli"], ["created_at", "2022-03-24 17:47:30.684443"], ["updated_at", "2022-03-24 17:47:30.684443"], ["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:28:in `block in create'
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 31ms (ActiveRecord: 10.9ms | Allocations: 5829)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-24 18:47:30 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:64:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3206)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 0.7ms | Allocations: 4577)
+
+
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:47:32 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:15
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 4379)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.2ms | Allocations: 4850)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:49:14 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 9689)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 9766)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.1ms | Allocations: 11178)
+
+
+  
+ActionView::Template::Error (undefined method `mail' for #<User id: 1, email: "zanluka.hojnik11@gmail.com", created_at: "2022-03-24 17:47:26.749403000 +0000", updated_at: "2022-03-24 17:47:26.749403000 +0000">
+Did you mean?  email):
+    17:       <tr>
+    18:         <td><%= post.title %></td>
+    19:         <td><%= post.body %></td>
+    20:         <td><%= post.user.mail %></td>
+    21:         <td><%= link_to 'Show', post %></td>
+    22:         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    23:         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/posts/index.html.erb:20
+app/views/posts/index.html.erb:16
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:50:13 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2083)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 5457)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.3ms | Allocations: 6953)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-24 18:50:15 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:64:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3759)
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 0.3ms | Allocations: 4966)
+
+
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:50:16 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 5115)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.8ms | Allocations: 5586)
+
+
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:50:37 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5467)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.4ms | Allocations: 6913)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-24 18:50:39 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:64:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:15
+  Rendered posts/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4112)
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 0.7ms | Allocations: 5779)
+
+
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:50:42 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 5123)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.4ms | Allocations: 5594)
+
+
+Started GET "/posts" for 127.0.0.1 at 2022-03-24 18:50:49 +0100
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 5442)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.5ms | Allocations: 6878)
+
+
