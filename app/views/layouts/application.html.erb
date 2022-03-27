@@ -1,50 +1,29 @@
+
 <!DOCTYPE html>
-<html>
+<html class="no-js">
   <head>
-    <title>BestMovieKolektion</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <!-- Basic need -->
+	<title>BestMovieKolektion</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="#">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+	<!-- Mobile specific meta -->
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+
+	<!-- CSS files -->
+	<link rel="stylesheet" href="http://bmk.clovery.si/dest/css/plugins.css">
+	<link rel="stylesheet" href="http://bmk.clovery.si/dest/css/style.css">
+
   </head>
-
   <body>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-  <%= link_to "Logo", root_path, class: "navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Nekaj</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Nekaj</a>
-        </li>
-        <%if(!user_signed_in?)%>
-        <li class="nav-item">
-          <%= link_to "Register", new_user_registration_path, class: "nav-link active" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link active" %>
-        </li>
-        <% end %>
-      </ul>
-      <form class="d-flex">
-      <% if(user_signed_in?) %>
-        <%= link_to "odjava", destroy_user_session_path, method: :delete, class: "nav-link active"  %>
-      <% end %>
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+    <%= render "layouts/navbar" %>
 <% if flash[:notice] %>
 <div class="alert alert-success" id="flash" role="alert"><%= notice %></div>
 <script type="text/javascript">
@@ -64,7 +43,812 @@ setTimeout(function () {
     }, 2500);
 </script>
 <% end %>
+<div class="slider sliderv2">
+	<div class="container">
+		<div class="row">
+	    	<div class="slider-single-item">
+	    		<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">Spider-Man: No Way Home<br><span>2021</span></a></h1>
+                  <br>
 
-    <%= yield %>
+								<div class="social-btn">
+									<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+									<div class="hover-bnt">
+										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h21’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 1 May 2015</li>
+			    					</ul>
+			    				</div>
+			    				<div class="btn-transform transform-vertical">
+									<div><a href="#" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "#" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="http://bmk.clovery.si/dest/images/movies/spiderman.png" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+	    		<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">guardians of the<br>
+								galaxy <span>2015</span></a></h1>
+								<div class="social-btn">
+									<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+									<div class="hover-bnt">
+										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h21’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 1 May 2015</li>
+			    					</ul>
+			    				</div>
+			    				<div class="btn-transform transform-vertical">
+									<div><a href="#" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "#" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>
+			    				
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="http://bmk.clovery.si/dest/images/movies/guardians.png" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+</div>
+<div class="movie-items  full-width">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="title-hd">
+				<h2>in theater</h2>
+				<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+			</div>
+			<div class="tabs">
+				<ul class="tab-links">
+					<li class="active"><a href="#tab1-h2">#Popular</a></li>
+					<li><a href="#tab2-h2"> #Coming soon</a></li>
+					<li><a href="#tab3-h2">  #Top rated  </a></li>
+					<li><a href="#tab4-h2"> #Most reviewed</a></li>                        
+				</ul>
+			    <div class="tab-content">
+			        <div id="tab1-h2" class="tab active">
+			            <div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+									<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The revenant</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+								</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The walk</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+			        </div>
+			        <div id="tab2-h2" class="tab">
+			           <div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The walk</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+			        </div>
+			        <div id="tab3-h2" class="tab">
+			        	<div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+									<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The revenant</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+								</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The walk</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+		       	 	</div>
+		       	 	 <div id="tab4-h2" class="tab">
+			        	<div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+		       	 	</div>
+			    </div>
+			</div>
+			<div class="title-hd">
+				<h2>on tv</h2>
+				<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+			</div>
+			<div class="tabs">
+				<ul class="tab-links-2">
+					<li class="active"><a href="#tab21-h2">#Popular</a></li>
+					<li><a href="#tab22-h2"> #Coming soon</a></li>
+					<li><a href="#tab23-h2">  #Top rated  </a></li>
+					<li><a href="#tab24-h2"> #Most reviewed</a></li>                        
+				</ul>
+			    <div class="tab-content">
+			        <div id="tab21-h2" class="tab active">
+			            <div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+								<div class="slide-it">
+									<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The revenant</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+								</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The walk</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+			        </div>
+			        <div id="tab22-h2" class="tab">
+			           <div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The walk</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+			        </div>
+			        <div id="tab23-h2" class="tab">
+			        	<div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="movie-item">
+			            			<div class="mv-img">
+			            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+			            			</div>
+			            			<div class="hvr-inner">
+			            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+			            			</div>
+			            			<div class="title-in">
+			            				<h6><a href="#">Interstellar</a></h6>
+			            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			            			</div>
+			            		</div>
+								<div class="movie-item">
+			            			<div class="mv-img">
+			            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+			            			</div>
+			            			<div class="hvr-inner">
+			            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+			            			</div>
+			            			<div class="title-in">
+			            				<h6><a href="#">The revenant</a></h6>
+			            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			            			</div>
+			            		</div>
+			            		<div class="movie-item">
+			            			<div class="mv-img">
+			            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+			            			</div>
+			            			<div class="hvr-inner">
+			            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+			            			</div>
+			            			<div class="title-in">
+			            				<h6><a href="#">Die hard</a></h6>
+			            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			            			</div>
+			            		</div>
+			            		<div class="movie-item">
+			            			<div class="mv-img">
+			            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+			            			</div>
+			            			<div class="hvr-inner">
+			            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+			            			</div>
+			            			<div class="title-in">
+			            				<h6><a href="#">The walk</a></h6>
+			            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			            			</div>
+			            		</div>
+			            		<div class="movie-item">
+			            			<div class="mv-img">
+			            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+			            			</div>
+			            			<div class="hvr-inner">
+			            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+			            			</div>
+			            			<div class="title-in">
+			            				<h6><a href="#">Die hard</a></h6>
+			            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			            			</div>
+			            		</div>
+			            	</div>
+			            </div>
+		       	 	</div>
+		       	 	 <div id="tab24-h2" class="tab">
+			        	<div class="row">
+			            	<div class="slick-multiItem2">
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">The walk</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Interstellar</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            		<div class="slide-it">
+			            			<div class="movie-item">
+				            			<div class="mv-img">
+				            				<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+				            			</div>
+				            			<div class="hvr-inner">
+				            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+				            			</div>
+				            			<div class="title-in">
+				            				<h6><a href="#">Die hard</a></h6>
+				            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+				            			</div>
+				            		</div>
+			            		</div>
+			            	</div>
+			            </div>
+		       	 	</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+      <%= yield %>
+  <script src="http://bmk.clovery.si/dest/js/jquery.js"></script>
+  <script src="http://bmk.clovery.si/dest/js/plugins.js"></script>
+  <script src="http://bmk.clovery.si/dest/js/plugins2.js"></script>
+  <script src="http://bmk.clovery.si/dest/js/custom.js"></script>
   </body>
 </html>
