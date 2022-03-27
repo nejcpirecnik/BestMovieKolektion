@@ -704,3 +704,17 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.4ms | Allocations: 5992)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-27 09:35:20 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.2ms | Allocations: 44934)
+Completed 200 OK in 100ms (Views: 90.0ms | ActiveRecord: 0.2ms | Allocations: 50858)
+
+
