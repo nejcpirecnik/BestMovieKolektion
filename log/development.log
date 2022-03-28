@@ -2273,3 +2273,3121 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 5163)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:07:35 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 13244)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 454)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 15545)
+Completed 200 OK in 50ms (Views: 40.8ms | ActiveRecord: 1.6ms | Allocations: 20516)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2022-03-28 12:08:05 +0200
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.3ms | Allocations: 4326)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:08:05 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 682)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3527)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3809)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 6128)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:08:17 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1072)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1312)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 2105)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:08:34 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1735)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1973)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 2456)
+
+
+Started GET "/users/sing_in" for 127.0.0.1 at 2022-03-28 12:09:14 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sing_in"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:09:19 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 155)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1156)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 88)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1403)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 2216)
+
+
+Started GET "/users/index.html" for 127.0.0.1 at 2022-03-28 12:09:36 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/index.html"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:09:43 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1296)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1966)
+
+
+Started GET "/users/index.html" for 127.0.0.1 at 2022-03-28 12:09:44 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/index.html"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:09:47 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1297)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 1979)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:10:33 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2073)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3705)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 5701)
+
+
+Started GET "/users/posts.html" for 127.0.0.1 at 2022-03-28 12:10:34 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/posts.html"):
+  
+Started GET "/users/posts.html" for 127.0.0.1 at 2022-03-28 12:11:51 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/posts.html"):
+  
+Started GET "/users/posts.html" for 127.0.0.1 at 2022-03-28 12:11:51 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/posts.html"):
+  
+Started GET "/users/posts.html" for 127.0.0.1 at 2022-03-28 12:11:52 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/posts.html"):
+  
+Started GET "/users/posts.html" for 127.0.0.1 at 2022-03-28 12:11:52 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/posts.html"):
+  
+Started GET "/users/posts.html" for 127.0.0.1 at 2022-03-28 12:12:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/posts.html"):
+  
+Started GET "/users/posts.html" for 127.0.0.1 at 2022-03-28 12:12:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/posts.html"):
+  
+Started GET "/users/posts.html" for 127.0.0.1 at 2022-03-28 12:12:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/posts.html"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:12:36 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2070)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3702)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 5752)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:12:37 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2081)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2352)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 3594)
+
+
+Started GET "/posts/index.html.erb" for 127.0.0.1 at 2022-03-28 12:12:38 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/posts/index.html.erb"):
+  
+Started GET "/posts/index.html.erb" for 127.0.0.1 at 2022-03-28 12:12:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/posts/index.html.erb"):
+  
+Started GET "/posts/index.html.erb" for 127.0.0.1 at 2022-03-28 12:12:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/posts/index.html.erb"):
+  
+Started GET "/posts/index.html.erb" for 127.0.0.1 at 2022-03-28 12:12:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/posts/index.html.erb"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:13:00 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2093)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3733)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 5190)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:13:00 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2070)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2340)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4183)
+
+
+Started GET "/users/root_path" for 127.0.0.1 at 2022-03-28 12:13:01 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/root_path"):
+  
+Started GET "/users/root_path" for 127.0.0.1 at 2022-03-28 12:13:32 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/root_path"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:13:33 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2070)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3739)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 5788)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:13:33 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2083)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 2371)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 3616)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:13:36 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1585)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1837)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 2359)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:14:34 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2082)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 354)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3779)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.6ms | Allocations: 5239)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:14:55 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2089)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 355)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3785)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 5277)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:15:24 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2079)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 1325)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4720)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms | Allocations: 6181)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 1..2)):
+    11:           <span></span>
+    12:         </div>
+    13:         </div>
+    14:         <%= link_to image_tag("https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67", alt="", width="119", height="58"), root_path, class: "logo" %>
+    15:         <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" width="119" height="58"></a>
+    16:       </div>
+    17:     <!-- Collect the nav links, forms, and other content for toggling -->
+  
+app/views/layouts/_navbar.html.erb:14
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:20:02 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2081)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4747)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 6204)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag "https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67",style: "width='119' height='58'", root_path, class: "logo" %>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag "https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67",style: "width='119' height='58'", root_path, class: "logo" %>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:20:39 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2090)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 4743)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 6195)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag "https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67",style: "width='119;' height='58;'", root_path, class: "logo" %>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag "https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67",style: "width='119;' height='58;'", root_path, class: "logo" %>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:21:24 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2081)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4737)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 6189)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag "https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67",style: 'width: 119; height: 58;', root_path, class: "logo" %>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag "https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67",style: 'width: 119; height: 58;', root_path, class: "logo" %>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:22:26 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4738)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 6190)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag ("https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67",style: 'width: 119px; height: 58px;'), root_path, class: "logo" %>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag ("https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67",style: 'width: 119px; height: 58px;'), root_path, class: "logo" %>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting `end'
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:22:47 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4733)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 6185)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag ("https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67"),style: 'width: 119px; height: 58px;', root_path, class: "logo" %>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag ("https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67"),style: 'width: 119px; height: 58px;', root_path, class: "logo" %>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:26:22 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 925)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4348)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 5845)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:26:47 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2079)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4731)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 6177)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;',root_path, class: "logo" %>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;',root_path, class: "logo" %>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:27:11 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 1314)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4708)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 6159)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
+    11:           <span></span>
+    12:         </div>
+    13:         </div>
+    14:         <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67',root_path, style: 'height:58; width:119;', class: "logo" %>
+    15:         <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+    16:       </div>
+    17:     <!-- Collect the nav links, forms, and other content for toggling -->
+  
+app/views/layouts/_navbar.html.erb:14
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:27:33 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4733)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 6185)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;', class: "logo", root_path %>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;', class: "logo", root_path %>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:27:58 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4733)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms | Allocations: 6185)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;',root_path,  class: "logo"%>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;',root_path,  class: "logo"%>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ',', expecting =>
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:28:22 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 1339)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4733)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 6185)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;',root_path  class: "logo"%>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;',root_path  class: "logo"%>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected label, expecting `do' or '{' or '('
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:28:48 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4731)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms | Allocations: 6183)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;',root_path %>
+        <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;',root_path %>
+15:            <a href="root_path"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" ></a>
+16:          </div>
+17:        <!-- Collect the nav links, forms, and other content for toggling -->
+18:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+19:          <ul class="nav navbar-nav flex-child-menu menu-left">
+20:            <li class="hidden">
+21:              <a href="#page-top"></a>
+22:            </li>
+23:            <li class="dropdown first">
+24:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+25:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+26:              </a>
+27:              <ul class="dropdown-menu level1">
+28:                <li><a href="index.html">Home 01</a></li>
+29:                <li><a href="homev2.html">Home 02</a></li>
+30:                <li><a href="homev3.html">Home 03</a></li>
+31:              </ul>
+32:            </li>	
+33:            <li class="dropdown first">
+34:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+35:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+36:              </a>
+37:              <ul class="dropdown-menu level1">
+38:                <!-- <li class="dropdown">
+39:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+40:                  <ul class="dropdown-menu level2">
+41:                    <li><a href="aboutv1.html">About Us 01</a></li>
+42:                    <li><a href="aboutv2.html">About Us 02</a></li>
+43:                  </ul>
+44:                </li> -->
+45:                <li><a href="moviegrid.html">Movie grid</a></li>
+46:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+47:                <li><a href="movielist.html">Movie list</a></li>
+48:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+49:              </ul>
+50:            </li>
+51:            <li class="dropdown first">
+52:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+53:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+54:              </a>
+55:              <ul class="dropdown-menu level1">
+56:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+57:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+58:                <li><a href="celebritylist.html">celebrity list</a></li>
+59:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+60:              </ul>
+61:            </li>
+62:            <li class="dropdown first">
+63:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+64:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+65:              </a>
+66:              <ul class="dropdown-menu level1">
+67:                <li><a href="bloglist.html">blog List</a></li>
+68:                <li><a href="bloggrid.html">blog Grid</a></li>
+69:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+70:              </ul>
+71:            </li>
+72:            <li class="dropdown first">
+73:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+74:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+75:              </a>
+76:              <ul class="dropdown-menu level1">
+77:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+78:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+79:                <li><a href="userprofile.html">user profile</a></li>
+80:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+81:              </ul>
+82:            </li>
+83:          </ul>
+84:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+85:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+86:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+87:          </ul>
+88:        </div>
+89:      <!-- /.navbar-collapse -->
+90:      </nav>
+91:      <!-- search form -->
+92:    </div>
+93:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:95: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:29:05 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 410)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3833)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 5331)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:29:30 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2079)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4728)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 6174)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;', root_path %>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Home 01</a></li>
+            <li><a href="homev2.html">Home 02</a></li>
+            <li><a href="homev3.html">Home 03</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <li><a href="moviegrid.html">Movie grid</a></li>
+            <li><a href="moviegridfw.html">movie grid full width</a></li>
+            <li><a href="movielist.html">Movie list</a></li>
+            <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="bloglist.html">blog List</a></li>
+            <li><a href="bloggrid.html">blog Grid</a></li>
+            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          community <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+            <li><a href="userfavoritelist.html">user favorite list</a></li>
+            <li><a href="userprofile.html">user profile</a></li>
+            <li class="it-last"><a href="userrate.html">user rate</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav flex-child-menu menu-right">            
+        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+      </ul>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;', root_path %>
+15:          </div>
+16:        <!-- Collect the nav links, forms, and other content for toggling -->
+17:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+18:          <ul class="nav navbar-nav flex-child-menu menu-left">
+19:            <li class="hidden">
+20:              <a href="#page-top"></a>
+21:            </li>
+22:            <li class="dropdown first">
+23:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+24:              Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+25:              </a>
+26:              <ul class="dropdown-menu level1">
+27:                <li><a href="index.html">Home 01</a></li>
+28:                <li><a href="homev2.html">Home 02</a></li>
+29:                <li><a href="homev3.html">Home 03</a></li>
+30:              </ul>
+31:            </li>	
+32:            <li class="dropdown first">
+33:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+34:              movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+35:              </a>
+36:              <ul class="dropdown-menu level1">
+37:                <!-- <li class="dropdown">
+38:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+39:                  <ul class="dropdown-menu level2">
+40:                    <li><a href="aboutv1.html">About Us 01</a></li>
+41:                    <li><a href="aboutv2.html">About Us 02</a></li>
+42:                  </ul>
+43:                </li> -->
+44:                <li><a href="moviegrid.html">Movie grid</a></li>
+45:                <li><a href="moviegridfw.html">movie grid full width</a></li>
+46:                <li><a href="movielist.html">Movie list</a></li>
+47:                <li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+48:              </ul>
+49:            </li>
+50:            <li class="dropdown first">
+51:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+52:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+53:              </a>
+54:              <ul class="dropdown-menu level1">
+55:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+56:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+57:                <li><a href="celebritylist.html">celebrity list</a></li>
+58:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+59:              </ul>
+60:            </li>
+61:            <li class="dropdown first">
+62:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+63:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+64:              </a>
+65:              <ul class="dropdown-menu level1">
+66:                <li><a href="bloglist.html">blog List</a></li>
+67:                <li><a href="bloggrid.html">blog Grid</a></li>
+68:                <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+69:              </ul>
+70:            </li>
+71:            <li class="dropdown first">
+72:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+73:              community <i class="fa fa-angle-down" aria-hidden="true"></i>
+74:              </a>
+75:              <ul class="dropdown-menu level1">
+76:                <li><a href="userfavoritegrid.html">user favorite grid</a></li>
+77:                <li><a href="userfavoritelist.html">user favorite list</a></li>
+78:                <li><a href="userprofile.html">user profile</a></li>
+79:                <li class="it-last"><a href="userrate.html">user rate</a></li>
+80:              </ul>
+81:            </li>
+82:          </ul>
+83:          <ul class="nav navbar-nav flex-child-menu menu-right">            
+84:            <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+85:            <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+86:          </ul>
+87:        </div>
+88:      <!-- /.navbar-collapse -->
+89:      </nav>
+90:      <!-- search form -->
+91:    </div>
+92:    </header>
+  
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:94: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:94: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:94: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:94: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:94: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navbar.html.erb:14: syntax error, unexpected ')', expecting =>
+app/views/layouts/_navbar.html.erb:94: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:30:05 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 482)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3905)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.4ms | Allocations: 5402)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:30:06 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1584)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 1918)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 2440)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:30:17 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2070)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2468)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4259)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:30:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1397)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2158)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:30:24 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1395)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2065)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:30:24 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1397)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2067)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:30:25 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1395)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2063)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:30:25 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1395)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2064)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:32:50 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2072)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3812)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 5805)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:32:51 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2082)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2413)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 3655)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:32:55 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1135)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1413)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 2171)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:32:58 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1584)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1861)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.4ms | Allocations: 2332)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:33:04 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1584)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 1861)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 2330)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:35:17 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1584)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1861)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 2331)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:36:01 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 410)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3832)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 5286)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:36:03 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2068)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2391)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4222)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:36:35 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2070)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3811)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 5897)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:36:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1336)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2099)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:36:39 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1058)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1336)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 2005)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:36:41 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2084)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2415)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 3605)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:36:42 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1135)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1413)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2170)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:36:43 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1584)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1861)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 2332)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:37:06 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2080)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 406)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3829)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 5284)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-28 12:37:07 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 237)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 530)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2571)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2894)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 4797)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:37:12 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1725)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2002)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.8ms | Allocations: 2528)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:37:20 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2079)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 406)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3827)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 5272)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:37:48 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2079)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3827)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 5319)
+
+
+Started GET "/moviesingle.html" for 127.0.0.1 at 2022-03-28 12:38:39 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/moviesingle.html"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-28 12:38:48 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1585)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1862)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 2350)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:39:07 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2070)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2393)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 4181)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:39:31 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2070)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3810)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 5887)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:40:47 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2070)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3809)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 5888)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-28 12:41:21 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 229)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1946)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 154)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2269)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 3679)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-28 12:41:27 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 154)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1062)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1340)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2102)
+
+
