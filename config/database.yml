@@ -13,6 +13,6 @@ test:
 
 production:
   <<: *default
-  database: bestmoviekolektion10_production
-  username: bestmoviekolektion10
-  password: <%= ENV['BESTMOVIEKOLEKTION10_DATABASE_PASSWORD'] %>
+  database: bestmoviekolektion_production
+  username: bestmoviekolektion
+  password: <%= ENV['BESTMOVIEKOLEKTION_DATABASE_PASSWORD'] %>
