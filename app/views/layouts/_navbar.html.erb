@@ -11,7 +11,9 @@
           <span></span>
         </div>
         </div>
-        <a href="index.html"><img class="logo" src="https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67" alt="" width="119" height="58"></a>
+        <%= link_to root_path do %>
+          <%= image_tag 'https://camo.githubusercontent.com/68205dbdfdb77a1faa6103f34d3a78fb71e59609688d8abb84efc4b14cee7014/68747470733a2f2f692e696d6775722e636f6d2f47435a694b74682e706e67', style: 'height:58; width:119;' %>
+        <% end %>
       </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
@@ -81,7 +83,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav flex-child-menu menu-right">            
-        <li class="loginLink"><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
+        <li><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
         <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
       </ul>
     </div>
