@@ -2,9 +2,12 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: %i[ index show ]
 
+  POSTS_PER_PAGE = 18
+
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @page = params.fetch(:page,0).to_i
+    @posts = Post.offset(@page * POSTS_PER_PAGE).limit(POSTS_PER_PAGE)
   end
 
   # GET /posts/1 or /posts/1.json

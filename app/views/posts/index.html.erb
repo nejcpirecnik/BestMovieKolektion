@@ -136,14 +136,8 @@
 					</select>
 					
 					<div class="pagination2">
-						<span>Page 1 of 2:</span>
-						<a class="active" href="#">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">...</a>
-						<a href="#">78</a>
-						<a href="#">79</a>
-						<a href="#"><i class="ion-arrow-right-b"></i></a>
+						<%= link_to "previous page", posts_path(page: @page - 1) %>
+						<%= link_to "next page", posts_path(page: @page + 1) %>
 					</div>
 				</div>
 			</div>
