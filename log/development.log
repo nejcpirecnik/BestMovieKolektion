@@ -5927,3 +5927,1811 @@ Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 3.7ms | Allocations: 280
 
   [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE "BestMovieKolektion_development" ENCODING = 'unicode'[0m
   [1m[35m (1.5ms)[0m  [1m[35mCREATE DATABASE "BestMovieKolektion_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:22:20 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.8ms | Allocations: 16211)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 446)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 18124)
+Completed 200 OK in 50ms (Views: 29.2ms | ActiveRecord: 8.8ms | Allocations: 24106)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:22:25 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2681)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2978)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 2.4ms | Allocations: 3569)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:23:00 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3006)
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3950)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 1.9ms | Allocations: 5505)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:23:16 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3012)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4058)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 1.4ms | Allocations: 5567)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:25:10 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3203)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4248)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 1.4ms | Allocations: 5757)
+
+
+Started GET "/images/uploads/mv1.jpg" for 127.0.0.1 at 2022-03-29 05:25:10 -0400
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:25:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/uploads/mv1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:25:11 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2705)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2995)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.3ms | Allocations: 3559)
+
+
+Started GET "/images/uploads/mv1.jpg" for 127.0.0.1 at 2022-03-29 05:25:11 -0400
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:25:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/uploads/mv1.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:25:11 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2511)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2787)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.3ms | Allocations: 3260)
+
+
+Started GET "/images/uploads/mv1.jpg" for 127.0.0.1 at 2022-03-29 05:25:12 -0400
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:25:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/uploads/mv1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:26:57 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 3222)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4268)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 2.6ms | Allocations: 5726)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:26:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:27:28 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2511)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2787)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 2.2ms | Allocations: 3277)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:27:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:21 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3205)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4251)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 1.3ms | Allocations: 5693)
+
+
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:21 -0400
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:28:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:22 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2513)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2789)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.4ms | Allocations: 3280)
+
+
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:28:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:22 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 2513)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 2789)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 2.0ms | Allocations: 3262)
+
+
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:22 -0400
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:28:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2513)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2789)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 2.1ms | Allocations: 3262)
+
+
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 39.1ms | Allocations: 16695)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 23918)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 6.2ms | Allocations: 24918)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 4713)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 14750)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 1.9ms | Allocations: 15637)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 27.0ms | Allocations: 11008)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 12643)
+Completed 200 OK in 39ms (Views: 31.9ms | ActiveRecord: 5.5ms | Allocations: 14476)
+
+
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3899)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4418)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 2.7ms | Allocations: 5068)
+
+
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2513)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 2789)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 2.4ms | Allocations: 3261)
+
+
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:28:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/bmk.clovery.si/dent/images/upload/sliderv2-background.png" for 127.0.0.1 at 2022-03-29 05:28:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/bmk.clovery.si/dent/images/upload/sliderv2-background.png"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:29:15 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:15
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1300)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2348)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 1.7ms | Allocations: 4686)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:29:17 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3240)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.3ms | Allocations: 3894)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:29:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:29:34 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:15
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1289)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2336)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 1.4ms | Allocations: 4482)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:29:37 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:16
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3240)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.3ms | Allocations: 3893)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:29:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:29:59 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1433)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2479)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.7ms | Allocations: 3921)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:29:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:30:08 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:15
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1089)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1365)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.5ms | Allocations: 2727)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:30:12 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1240)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1713)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:30:42 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1432)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2478)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 3918)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:30:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:30:47 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 963)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1239)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.8ms | Allocations: 1734)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:30:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:31:05 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:20
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1433)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2479)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 3920)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:31:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:31:49 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1431)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2477)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.7ms | Allocations: 3942)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:31:49 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:31:58 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:15
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1092)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 1368)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.3ms | Allocations: 2728)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:32:01 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1240)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.7ms | Allocations: 1712)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-29 05:32:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.6ms | Allocations: 6076)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:32:06 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 997)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1298)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.1ms | Allocations: 1822)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:32:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:32:09 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 965)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1241)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1714)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:32:17 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:15
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 908)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1184)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.4ms | Allocations: 2371)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:34:32 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1431)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2477)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 3921)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:34:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:34:39 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1096)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1372)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.6ms | Allocations: 2734)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:34:59 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2161)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3209)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 1.3ms | Allocations: 5350)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:35:45 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2161)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3209)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 1.9ms | Allocations: 5426)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:35:57 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2160)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3206)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 1.1ms | Allocations: 5417)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:35:58 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 890)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1166)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 1.2ms | Allocations: 2408)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:36:32 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2161)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3106)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 1.6ms | Allocations: 5247)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:36:41 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 890)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1166)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.1ms | Allocations: 2412)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:36:46 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1354)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1630)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.7ms | Allocations: 2233)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:36:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:37:46 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 18.6ms | Allocations: 2163)
+  Rendered layouts/_navbar.html.erb (Duration: 8.3ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 3109)
+Completed 200 OK in 37ms (Views: 26.4ms | ActiveRecord: 7.8ms | Allocations: 5249)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:37:49 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 890)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1166)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.6ms | Allocations: 2412)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:38:10 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2166)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3112)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 1.3ms | Allocations: 5259)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:38:11 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 894)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1170)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.2ms | Allocations: 2412)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:38:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2161)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3106)
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 1.4ms | Allocations: 5247)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:38:49 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 986)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1987)
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.7ms | Allocations: 4205)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:39:28 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2150)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3096)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 1.4ms | Allocations: 5394)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:39:46 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 890)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1166)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 1.2ms | Allocations: 2408)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:40:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2148)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3094)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 1.2ms | Allocations: 5235)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:40:28 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1359)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1635)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.7ms | Allocations: 2291)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:40:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:40:51 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2148)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3864)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.5ms | Allocations: 5987)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/__navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/hades/Documents/BestMovieKolektion/app/views"
+  * "/home/hades/.rvm/gems/ruby-3.0.2/gems/devise-4.8.0/app/views"
+  * "/home/hades/.rvm/gems/ruby-3.0.2/gems/actiontext-6.1.5/app/views"
+  * "/home/hades/.rvm/gems/ruby-3.0.2/gems/actionmailbox-6.1.5/app/views"
+):
+    23: 
+    24:   </head>
+    25:   <body>
+    26:     <%= render "layouts/_navbar" %>
+    27: <% if flash[:notice] %>
+    28: <div class="alert alert-success" id="flash" role="alert"><%= notice %></div>
+    29: <script type="text/javascript">
+  
+app/views/layouts/application.html.erb:26
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:41:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 420)
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2766)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3294)
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 1.8ms | Allocations: 5513)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:41:40 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2773)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3301)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.3ms | Allocations: 5516)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:41:45 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1073)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1348)
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.2ms | Allocations: 2590)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:41:45 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1073)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1348)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.2ms | Allocations: 2520)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:42:00 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 420)
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2767)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3295)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 1.3ms | Allocations: 5439)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:42:09 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2151)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3096)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 1.2ms | Allocations: 5307)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:42:18 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2149)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3094)
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 1.7ms | Allocations: 5306)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:42:27 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2150)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3095)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 1.4ms | Allocations: 5306)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:42:42 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2165)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3111)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 2.1ms | Allocations: 5328)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:47:05 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1167)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 1.2ms | Allocations: 2413)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:47:06 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1167)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.2ms | Allocations: 2339)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:47:06 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1167)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 1.3ms | Allocations: 2339)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:47:06 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1167)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 1.0ms | Allocations: 2339)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:47:14 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1167)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 2.0ms | Allocations: 2339)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:47:59 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1167)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 1.5ms | Allocations: 2339)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:48:11 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1170)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.2ms | Allocations: 2342)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:48:25 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1353)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1629)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.7ms | Allocations: 2232)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:48:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:48:27 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1170)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.3ms | Allocations: 2344)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:48:30 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1240)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 1711)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:48:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:48:37 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1167)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.4ms | Allocations: 2342)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:49:51 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1240)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 1712)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:49:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:49:59 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1167)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.3ms | Allocations: 2340)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:50:17 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1167)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 1.2ms | Allocations: 2339)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:00 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2167)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 406)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3114)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 1.5ms | Allocations: 5259)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:55:02 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1354)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1630)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.7ms | Allocations: 2285)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:55:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:23 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2163)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 405)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3108)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 2.0ms | Allocations: 5256)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1167)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 1.5ms | Allocations: 2433)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1167)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 2.7ms | Allocations: 2343)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1167)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 1.5ms | Allocations: 2340)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1167)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 1.9ms | Allocations: 2339)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1167)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 2.0ms | Allocations: 2340)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1167)
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.2ms | Allocations: 2339)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1167)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 2.8ms | Allocations: 2339)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 895)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1171)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 2.1ms | Allocations: 2343)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 892)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 1168)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 1.5ms | Allocations: 2340)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1167)
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 1.8ms | Allocations: 2339)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:55:26 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1167)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 2339)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:55:27 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1353)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1629)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.7ms | Allocations: 2231)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:55:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:55:54 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 965)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1241)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 1713)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:55:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:55:57 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 965)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1241)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.7ms | Allocations: 1714)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:55:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:56:41 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1528)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 406)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2473)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 3914)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:56:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:57:28 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1529)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 406)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2474)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 1.4ms | Allocations: 3939)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:57:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:57:31 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 965)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1241)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 1737)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:57:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:57:41 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1967)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2243)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 1.6ms | Allocations: 3584)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:58:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2164)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3133)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 1.2ms | Allocations: 5273)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:58:26 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1167)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.1ms | Allocations: 2411)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:58:26 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1167)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 2.0ms | Allocations: 2339)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:58:26 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1167)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.2ms | Allocations: 2339)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:58:53 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2164)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3126)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.2ms | Allocations: 5268)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:58:54 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1353)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1629)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.7ms | Allocations: 2283)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:58:54 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:59:22 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1529)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2487)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 3929)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-03-29 05:59:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/posts/2" for 127.0.0.1 at 2022-03-29 05:59:31 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2240)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.3ms | Allocations: 3602)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:59:37 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1240)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.1ms | Allocations: 1713)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-29 05:59:44 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:13
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 891)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1167)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 1.2ms | Allocations: 2339)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-29 05:59:49 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:118
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 964)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1240)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 1711)
+
+

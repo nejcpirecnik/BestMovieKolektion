@@ -1,31 +1,210 @@
+<div class="slider sliderv2">
+	<div class="container">
+		<div class="row">
+	    	<div class="slider-single-item">
+	    		<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">Spider-Man: No Way Home<br><span>2021</span></a></h1>
+                  <br>
 
-
-<h1>Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>user</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= post.user.email %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+								<div class="social-btn">
+									<a href="https://www.youtube.com/watch?v=JfVOs4VSpmA" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+									<div class="hover-bnt">
+										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h21’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 1 May 2015</li>
+			    					</ul>
+			    				</div>
+			    				<div class="btn-transform transform-vertical">
+									<div><a href="#" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "#" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>		
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="http://bmk.clovery.si/dest/images/movies/spiderman.png" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+	    		<div class="movie-item">
+	    			<div class="row">
+	    				<div class="col-md-8 col-sm-12 col-xs-12">
+	    					<div class="title-in">
+			    				<div class="cate">
+			    					<span class="blue"><a href="#">Sci-fi</a></span>
+			    					<span class="yell"><a href="#">Action</a></span>
+			    					<span class="orange"><a href="#">advanture</a></span>
+			    				</div>
+			    				<h1><a href="#">guardians of the<br>
+								galaxy <span>2015</span></a></h1>
+								<div class="social-btn">
+									<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+									<div class="hover-bnt">
+										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>		
+								</div>
+			    				<div class="mv-details">
+			    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+			    					<ul class="mv-infor">
+			    						<li>  Run Time: 2h21’ </li>
+			    						<li>  Rated: PG-13  </li>
+			    						<li>  Release: 1 May 2015</li>
+			    					</ul>
+			    				</div>
+			    				<div class="btn-transform transform-vertical">
+									<div><a href="#" class="item item-1 redbtn">more detail</a></div>
+									<div><a href= "#" class="item item-2 redbtn hvrbtn">more detail</a></div>
+								</div>
+			    				
+			    			</div>
+	    				</div>
+	    				<div class="col-md-4 col-sm-12 col-xs-12">
+		    				<div class="mv-img-2">
+			    				<a href="#"><img src="http://bmk.clovery.si/dest/images/movies/guardians.png" alt=""></a>
+			    			</div>
+		    			</div>
+	    			</div>	
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="topbar-filter fw">
+					<p>Found <span>1,608 movies</span> in total</p>
+					<label>Sort by:</label>
+					<select>
+						<option value="popularity">Popularity Descending</option>
+						<option value="popularity">Popularity Ascending</option>
+						<option value="rating">Rating Descending</option>
+						<option value="rating">Rating Ascending</option>
+						<option value="date">Release date Descending</option>
+						<option value="date">Release date Ascending</option>
+					</select>
+				</div>
+				<div class="flex-wrap-movielist mv-grid-fw">
+        <% @posts.each do |post| %>
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+							<div class="hvr-inner">
+              <%= link_to 'Read More', post %><i class="ion-android-arrow-dropright"></i> </a>
+	            			</div>
+							<div class="mv-item-infor">
+								<h6><a href="#"><%= post.title %></a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+							</div>
+						</div>				
+            <% end %>
+				</div>		
+				<div class="topbar-filter">
+					<label>Movies per page:</label>
+					<select>
+						<option value="range">20 Movies</option>
+						<option value="saab">10 Movies</option>
+					</select>
+					
+					<div class="pagination2">
+						<span>Page 1 of 2:</span>
+						<a class="active" href="#">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">...</a>
+						<a href="#">78</a>
+						<a href="#">79</a>
+						<a href="#"><i class="ion-arrow-right-b"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer section-->
+<footer style="background-image: url(http://bmk.clovery.si/dest/images/uploads/sliderv2-background.png) !important;" class="ht-footer">
+	<div class="container">
+		<div class="flex-parent-ft">
+			<div class="flex-child-ft item1">
+				 <a href="index.html"><img class="logo" src="images/logo1.png" alt=""></a>
+				 <p>5th Avenue st, manhattan<br>
+				New York, NY 10001</p>
+				<p>Call us: <a href="#">(+01) 202 342 6789</a></p>
+			</div>
+			<div class="flex-child-ft item2">
+				<h4>Resources</h4>
+				<ul>
+					<li><a href="#">About</a></li> 
+					<li><a href="#">Blockbuster</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Forums</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Help Center</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item3">
+				<h4>Legal</h4>
+				<ul>
+					<li><a href="#">Terms of Use</a></li> 
+					<li><a href="#">Privacy Policy</a></li>	
+					<li><a href="#">Security</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item4">
+				<h4>Account</h4>
+				<ul>
+					<li><a href="#">My Account</a></li> 
+					<li><a href="#">Watchlist</a></li>	
+					<li><a href="#">Collections</a></li>
+					<li><a href="#">User Guide</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item5">
+				<h4>Newsletter</h4>
+				<p>Subscribe to our newsletter system now <br> to get latest news from us.</p>
+				<form action="#">
+					<input type="text" placeholder="Enter your email...">
+				</form>
+				<a href="#" class="btn">Subscribe now <i class="ion-ios-arrow-forward"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="ft-copyright">
+		<div class="ft-left">
+			<p>© 2017 Blockbuster. All Rights Reserved. Designed by leehari.</p>
+		</div>
+		<div class="backtotop">
+			<p><a href="#" id="back-to-top">Back to top  <i class="ion-ios-arrow-thin-up"></i></a></p>
+		</div>
+	</div>
+</footer>
+<!-- end of footer section-->
