@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   def index
     @page = params.fetch(:page,0).to_i
     @posts = Post.offset(@page * POSTS_PER_PAGE).limit(POSTS_PER_PAGE)
+    @vsiposti = Post.all
   end
 
   # GET /posts/1 or /posts/1.json
