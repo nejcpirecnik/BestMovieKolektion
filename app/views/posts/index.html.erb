@@ -129,15 +129,19 @@
             <% end %>
 				</div>		
 				<div class="topbar-filter">
-					<label>Movies per page:</label>
-					<select>
-						<option value="range">20 Movies</option>
-						<option value="saab">10 Movies</option>
-					</select>
-					
+					<label>Movies per page: 18 </label>
 					<div class="pagination2">
+					<% if(@page * 18 > 18) %>
+							<%= link_to "previous page", posts_path(page: @page - 1) %>
+					<% end %>
+					<% if(@page * 18 == 18) %>
 						<%= link_to "previous page", posts_path(page: @page - 1) %>
+						|
 						<%= link_to "next page", posts_path(page: @page + 1) %>
+					<% end %>
+					<% if(@page * 18 < 18) %>
+						<%= link_to "next page", posts_path(page: @page + 1) %>
+					<% end %>
 					</div>
 				</div>
 			</div>
