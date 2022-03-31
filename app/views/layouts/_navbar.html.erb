@@ -86,10 +86,16 @@
           </ul>
         </li>
       </ul>
+      <% if(!user_signed_in?)%>
       <ul class="nav navbar-nav flex-child-menu menu-right">         
-        <li><%= link_to "Login", new_user_session_path, class: "nav-link active" %></li>
-        <li class="btn signupLink"><%= link_to "Register", new_user_registration_path, class: "nav-link active" %></li>
+        <li><%= link_to "Login", new_user_session_path, class:"nav-link active" %></li>
+        <li><%= link_to "Register", new_user_registration_path, class:"nav-link active" %></li>
       </ul>
+      <% else %>
+      <ul class="nav navbar-nav flex-child-menu menu-right">         
+        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete , class:"nav-link active" %></li>
+      </ul>
+      <% end %>
     </div>
   <!-- /.navbar-collapse -->
   </nav>
