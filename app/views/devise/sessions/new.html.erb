@@ -75,8 +75,7 @@
               </figure>
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                 <form class="input_style_1" method="post">
-                  <a href="#0" class="social_bt facebook">Login with Facebook</a>
-                  <%= link_to "Register with Facebook", user_facebook_omniauth_authorize_path, method: :post %>
+                  <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, method: :post, class: "social_bt facebook" %>
                   <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post, class: "social_bt google" %>
                   <div class="divider"><span>Or</span></div>
                   <div class="form-group">
