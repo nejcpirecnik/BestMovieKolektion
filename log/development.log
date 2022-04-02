@@ -12126,3 +12126,322 @@ Started GET "/images/logo1.png" for ::1 at 2022-03-31 18:07:22 +0200
   
 ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
   
+Started GET "/" for 127.0.0.1 at 2022-04-02 15:54:09 +0200
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 4.2ms | Allocations: 907)
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 36.0ms | Allocations: 7828)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 8210)
+Completed 200 OK in 59ms (Views: 29.7ms | ActiveRecord: 13.4ms | Allocations: 12847)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-02 15:54:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 15:54:12 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 807)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.4ms | Allocations: 6158)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 6270)
+Completed 200 OK in 54ms (Views: 31.2ms | ActiveRecord: 6.8ms | Allocations: 12724)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2022-04-02 15:54:14 +0200
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 15:54:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 228)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1511)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1606)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 2367)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 15:55:24 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1506)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1600)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 2285)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2022-04-02 15:55:25 +0200
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 15:55:29 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 228)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1506)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1600)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 2285)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 15:55:38 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 228)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1506)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 1599)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 2271)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2022-04-02 15:55:39 +0200
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 15:55:43 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 228)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1506)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 1602)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 2277)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 15:55:51 +0200
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.1ms | Allocations: 835)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.4ms | Allocations: 6625)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 7006)
+Completed 200 OK in 70ms (Views: 33.6ms | ActiveRecord: 10.9ms | Allocations: 16255)
+
+
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2022-04-02 15:55:53 +0200
+Started GET "/users/auth/google_oauth2/callback?state=75895f0910eac676ef839d0c70522b993f1fd73b869dc6e8&code=4%2F0AX4XfWjr_ZDqmM2adbK1HeOSQcaAt862a5Ygr59EIXEpsnDV2M0MfOVHIzJtpxNQWCPbAQ&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none" for 127.0.0.1 at 2022-04-02 15:55:53 +0200
+Started GET "/users/auth/google_oauth2" for 127.0.0.1 at 2022-04-02 15:55:53 +0200
+Started GET "/users/auth/google_oauth2/callback?state=36955a149f9240129b866c93fc3070e66253ba1bc56326cb&code=4%2F0AX4XfWiZIw4AXv-ypCs_VRdW3PTQr0PWL8d5M_YAHkz9m3xNgbcpfDmfiIcG3uPLoNGhzQ&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none" for 127.0.0.1 at 2022-04-02 15:55:54 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"75895f0910eac676ef839d0c70522b993f1fd73b869dc6e8", "code"=>"4/0AX4XfWjr_ZDqmM2adbK1HeOSQcaAt862a5Ygr59EIXEpsnDV2M0MfOVHIzJtpxNQWCPbAQ", "scope"=>"email openid https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "zanluka.hojnik11@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 5.6ms | Allocations: 2787)
+
+
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"36955a149f9240129b866c93fc3070e66253ba1bc56326cb", "code"=>"4/0AX4XfWiZIw4AXv-ypCs_VRdW3PTQr0PWL8d5M_YAHkz9m3xNgbcpfDmfiIcG3uPLoNGhzQ", "scope"=>"email https://www.googleapis.com/auth/userinfo.email openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "zanluka.hojnik11@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms | Allocations: 1247)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-02 15:55:54 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 7.7ms | Allocations: 1966)
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 7596)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 7720)
+Completed 200 OK in 37ms (Views: 21.0ms | ActiveRecord: 10.3ms | Allocations: 10090)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-02 15:55:54 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/users/sign_out" for 127.0.0.1 at 2022-04-02 15:55:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-02 15:55:58 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 10.3ms | Allocations: 1474)
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 3052)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3152)
+Completed 200 OK in 24ms (Views: 17.6ms | ActiveRecord: 3.7ms | Allocations: 3723)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-02 15:56:05 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 8.0ms | Allocations: 1286)
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2844)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2937)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 3.2ms | Allocations: 3438)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-02 15:56:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-02 16:05:30 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 50.3ms | Allocations: 9360)
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 69.3ms | Allocations: 14162)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 14508)
+Completed 200 OK in 80ms (Views: 74.8ms | ActiveRecord: 26.8ms | Allocations: 16776)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-02 16:05:30 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-02 16:05:33 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 280)
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2016)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 2109)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 1.8ms | Allocations: 2591)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-02 16:05:34 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 16:05:35 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 758)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3131)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3242)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 5206)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2022-04-02 16:05:38 +0200
+Processing by Users::OmniauthCallbacksController#passthru as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 43)
+Completed 404 Not Found in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 902)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 16:05:40 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 299)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1705)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1805)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 2584)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 16:05:58 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 706)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 2975)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3320)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 5306)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2022-04-02 16:06:00 +0200
+Processing by Users::OmniauthCallbacksController#passthru as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.3ms | Allocations: 41)
+Completed 404 Not Found in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 694)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 16:06:01 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 299)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1712)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 1812)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 2585)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 16:06:02 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 293)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1596)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 1689)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 2358)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2022-04-02 16:06:03 +0200
+Processing by Users::OmniauthCallbacksController#passthru as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.3ms | Allocations: 26)
+Completed 404 Not Found in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 397)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 16:06:04 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 293)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1596)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1689)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2355)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-02 16:06:17 +0200
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 934)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.6ms | Allocations: 6771)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 7152)
+Completed 200 OK in 60ms (Views: 28.3ms | ActiveRecord: 8.4ms | Allocations: 16400)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2022-04-02 16:06:19 +0200
+Started GET "/users/auth/facebook/callback?code=AQDe9cTgswlRex99Hz6DJhsuMqGLABSY4rUmf1s5MsFhM8R_RT4UNbQxKujOBqKb6SGry4GWsb2VAgpzj41o1ZQqlv_2kBzTuNvR4mDpxrh9S1GHS9XGliWz031ZmLuwgOFXv96pe5GOCyR2Qz0OnZvF50ubwE_uNFhwybLEftl0FYqzri9qhi9JVvU8Rou6utYGcPTehASW4rWWeh45H6U0C_lpNny_8Jf870iRAHtjjqn1Om9GG5X3Ng3xZZflQpUwdZveXWLnceA2-Fwq7a4WkRoTEfq2azOsUF1eE7fQCWxK1lKzPYKXccx6C5Ql5RTmUXNhlGehawfWDMZI1qRxcYiUdomLL2TZEYr9nIlHkygYPCyCgKwlgG1sDX3C_U1uhnNiaFCikQ4HDDtgjGF5ep2mN2oBi7ONlD_7jqGaQg&state=f66b90af02dc56a8f77a3c18186d7a81f1cba238312a461e" for 127.0.0.1 at 2022-04-02 16:06:59 +0200
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDe9cTgswlRex99Hz6DJhsuMqGLABSY4rUmf1s5MsFhM8R_RT4UNbQxKujOBqKb6SGry4GWsb2VAgpzj41o1ZQqlv_2kBzTuNvR4mDpxrh9S1GHS9XGliWz031ZmLuwgOFXv96pe5GOCyR2Qz0OnZvF50ubwE_uNFhwybLEftl0FYqzri9qhi9JVvU8Rou6utYGcPTehASW4rWWeh45H6U0C_lpNny_8Jf870iRAHtjjqn1Om9GG5X3Ng3xZZflQpUwdZveXWLnceA2-Fwq7a4WkRoTEfq2azOsUF1eE7fQCWxK1lKzPYKXccx6C5Ql5RTmUXNhlGehawfWDMZI1qRxcYiUdomLL2TZEYr9nIlHkygYPCyCgKwlgG1sDX3C_U1uhnNiaFCikQ4HDDtgjGF5ep2mN2oBi7ONlD_7jqGaQg", "state"=>"f66b90af02dc56a8f77a3c18186d7a81f1cba238312a461e"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "zanluka.hojnik11@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 5.0ms | Allocations: 2870)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-02 16:07:00 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 8.2ms | Allocations: 1973)
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 7611)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 7735)
+Completed 200 OK in 36ms (Views: 19.7ms | ActiveRecord: 12.3ms | Allocations: 10105)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-02 16:07:01 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
