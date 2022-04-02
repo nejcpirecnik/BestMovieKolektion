@@ -274,9 +274,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   OmniAuth.config.allowed_request_methods = [:post, :get]
-  config.omniauth :google_oauth2, 'app_id', 'secret_key', { scope: 'email' }
-
-  config.omniauth :facebook, "app_id", "secret_key"
+  config.omniauth :google_oauth2, 'app_id', 'secret', { scope: 'email' }
+  
 
 
 
