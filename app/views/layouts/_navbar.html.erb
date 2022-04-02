@@ -93,7 +93,7 @@
       </ul>
       <% else %>
       <ul class="nav navbar-nav flex-child-menu menu-right">         
-        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete , class:"nav-link active" %></li>
+        <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
       </ul>
       <% end %>
     </div>
