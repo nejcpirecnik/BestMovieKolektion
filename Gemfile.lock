@@ -256,6 +256,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  faraday
   jbuilder (~> 2.7)
   listen (~> 3.3)
   omniauth-facebook

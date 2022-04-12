@@ -34,6 +34,8 @@ gem 'omniauth-rails_csrf_protection'
 
 gem 'omniauth-facebook'
 
+gem 'faraday'
+
 gem 'devise' #for register and login -- tokrat niso "accounts" temvec users
 
 group :development, :test do

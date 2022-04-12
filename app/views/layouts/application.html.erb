@@ -21,6 +21,11 @@
 	<link rel="stylesheet" href="http://bmk.clovery.si/dest/css/style.css">
 
 </head>
+<% 
+require 'faraday'
+require 'faraday/net_http'
+Faraday.default_adapter = :net_http
+%>
 <body>
 		<% if flash[:notice] %>
 			<div class="alert alert-success" id="flash" role="alert">

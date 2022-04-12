@@ -127,20 +127,23 @@
 							</div>
 							<div class="mv-item-infor">
 								<h6><a href="#">
-										<%= post.title %>
+								<%= post.title %>
 									</a></h6>
 								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
 							</div>
 						</div>
 						<% end %>
+						<% response = Faraday.get('http://www.omdbapi.com/?t=Batman&apikey=') %>
+						<% data = JSON.parse(response.body) %>
+						<%= data['Title'] %>
 				</div>
 				<div class="topbar-filter">
 					<label>Movies per page: 18 </label>
 					<div class="pagination2">
-						<% if(@page * 18> 18) %>
+						<% if(@page * 18 > 18) %>
 							<%= link_to "previous page" , posts_path(page: @page - 1) %>
 								<% end %>
-									<% if(@page * 18==18) %>
+									<% if(@page * 18 == 18) %>
 										<%= link_to "previous page" , posts_path(page: @page - 1) %>
 											|
 											<%= link_to "Next page" , posts_path(page: @page + 1) %>
