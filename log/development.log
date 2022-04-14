@@ -22122,3 +22122,239 @@ Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-14 09:26:31 +0200
   
 ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
   
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:31:07 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 17.8ms | Allocations: 7870)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 353.2ms | Allocations: 16777)
+  Rendered layout layouts/application.html.erb (Duration: 353.7ms | Allocations: 16869)
+Completed 500 Internal Server Error in 364ms (ActiveRecord: 11.2ms | Allocations: 21548)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    138: 						<%= i=0; %>																i = 0
+    139: 						<%=	while i < 19 do %>
+    140: 						<div class="movie-item-style-2 movie-item-style-1">
+    141: 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
+    142: 						<div class="hvr-inner">
+    143: 						</div>
+    144: 						<div class="mv-item-infor">
+  
+app/views/posts/index.html.erb:141
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:31:25 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 16.7ms | Allocations: 7872)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 500.7ms | Allocations: 16779)
+  Rendered layout layouts/application.html.erb (Duration: 501.2ms | Allocations: 16871)
+Completed 500 Internal Server Error in 514ms (ActiveRecord: 9.2ms | Allocations: 21551)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    138: 						<%= i=0; %>																i = 0
+    139: 						<%=	while i < 19 do %>
+    140: 						<div class="movie-item-style-2 movie-item-style-1">
+    141: 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
+    142: 						<div class="hvr-inner">
+    143: 						</div>
+    144: 						<div class="mv-item-infor">
+  
+app/views/posts/index.html.erb:141
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:32:54 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 15.5ms | Allocations: 7872)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 490.7ms | Allocations: 15930)
+  Rendered layout layouts/application.html.erb (Duration: 493.2ms | Allocations: 16370)
+Completed 200 OK in 504ms (Views: 487.1ms | ActiveRecord: 8.8ms | Allocations: 21109)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-14 03:32:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:34:18 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 6.8ms | Allocations: 2038)
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 614.5ms | Allocations: 5801)
+  Rendered layout layouts/application.html.erb (Duration: 616.6ms | Allocations: 6178)
+Completed 200 OK in 620ms (Views: 616.1ms | ActiveRecord: 2.5ms | Allocations: 7791)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-14 03:34:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:34:37 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 4.0ms | Allocations: 2037)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 433.3ms | Allocations: 7214)
+  Rendered layout layouts/application.html.erb (Duration: 433.7ms | Allocations: 7289)
+Completed 500 Internal Server Error in 437ms (ActiveRecord: 1.5ms | Allocations: 8777)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    138: 						<%= i=0; %>																
+    139: 						<%=	while i < 100 do %>
+    140: 						<div class="movie-item-style-2 movie-item-style-1">
+    141: 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
+    142: 						<div class="hvr-inner">
+    143: 						</div>
+    144: 						<div class="mv-item-infor">
+  
+app/views/posts/index.html.erb:141
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:34:49 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 4.1ms | Allocations: 2028)
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 474.2ms | Allocations: 7045)
+  Rendered layout layouts/application.html.erb (Duration: 474.7ms | Allocations: 7119)
+Completed 500 Internal Server Error in 478ms (ActiveRecord: 1.5ms | Allocations: 8610)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    138: 						<%= i=0; %>																
+    139: 						<%=	while i < 50 do %>
+    140: 						<div class="movie-item-style-2 movie-item-style-1">
+    141: 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
+    142: 						<div class="hvr-inner">
+    143: 						</div>
+    144: 						<div class="mv-item-infor">
+  
+app/views/posts/index.html.erb:141
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:34:56 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 3.6ms | Allocations: 2028)
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 345.4ms | Allocations: 5673)
+  Rendered layout layouts/application.html.erb (Duration: 346.2ms | Allocations: 6050)
+Completed 200 OK in 349ms (Views: 345.9ms | ActiveRecord: 1.6ms | Allocations: 7587)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-14 03:34:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:35:01 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 4.9ms | Allocations: 2038)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 508.9ms | Allocations: 7184)
+  Rendered layout layouts/application.html.erb (Duration: 509.4ms | Allocations: 7259)
+Completed 500 Internal Server Error in 519ms (ActiveRecord: 1.7ms | Allocations: 8728)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    138: 						<%= i=0; %>																
+    139: 						<%=	while i < 21 do %>
+    140: 						<div class="movie-item-style-2 movie-item-style-1">
+    141: 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
+    142: 						<div class="hvr-inner">
+    143: 						</div>
+    144: 						<div class="mv-item-infor">
+  
+app/views/posts/index.html.erb:141
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:35:07 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 3.9ms | Allocations: 2028)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:122
+  Rendered posts/index.html.erb within layouts/application (Duration: 281.6ms | Allocations: 5649)
+  Rendered layout layouts/application.html.erb (Duration: 284.1ms | Allocations: 6026)
+Completed 200 OK in 287ms (Views: 284.4ms | ActiveRecord: 1.5ms | Allocations: 7563)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-14 03:35:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:37:23 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 4.4ms | Allocations: 2026)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:74
+  Rendered posts/index.html.erb within layouts/application (Duration: 388.8ms | Allocations: 5697)
+  Rendered layout layouts/application.html.erb (Duration: 390.8ms | Allocations: 6074)
+Completed 200 OK in 394ms (Views: 391.2ms | ActiveRecord: 1.3ms | Allocations: 7569)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-14 03:37:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-14 03:37:55 -0400
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 5.7ms | Allocations: 2028)
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:123
+  Rendered posts/index.html.erb within layouts/application (Duration: 307.4ms | Allocations: 5753)
+  Rendered layout layouts/application.html.erb (Duration: 309.3ms | Allocations: 6130)
+Completed 200 OK in 313ms (Views: 309.0ms | ActiveRecord: 2.3ms | Allocations: 7631)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-14 03:37:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
