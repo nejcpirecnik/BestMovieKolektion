@@ -3,18 +3,22 @@
 	<div class="container">
 		<div class="row">
 			<div class="slider-single-item">
+			<% responsed = Faraday.get('https://api.themoviedb.org/3/movie/popular?api_key=&language=en-US&page=1') %>
+			<% popular = JSON.parse(responsed.body) %>
 				<!--START-->
+				<%= a=0; %>																
+				<%=	while a < 5 do %>
 				<div class="movie-item">
 					<div class="row">
 						<div class="col-md-8 col-sm-12 col-xs-12">
 							<div class="title-in">
 								<div class="cate">
-									<span class="blue"><a href="#">Sci-fi</a></span>
+									<!-- <span class="blue"><a href="#">Sci-fi</a></span>
 									<span class="yell"><a href="#">Action</a></span>
-									<span class="orange"><a href="#">advanture</a></span>
+									<span class="orange"><a href="#">advanture</a></span> -->
 								</div>
-								<h1><a href="#">guardians of the<br>
-										galaxy <span>2015</span></a></h1>
+								<h1><a href="#"><%= popular['results'][a]['original_title'] %><br>
+									 <span><%= popular['results'][a]['release_date'] %></span></a></h1>
 								<div class="social-btn">
 									<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
 									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
@@ -31,9 +35,9 @@
 								<div class="mv-details">
 									<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
 									<ul class="mv-infor">
-										<li> Run Time: 2h21’ </li>
-										<li> Rated: PG-13 </li>
-										<li> Release: 1 May 2015</li>
+										<li> original language: <%= popular['results'][a]['original_language'] %></li>
+										<li> Rated:  <%= popular['results'][a]['vote_average'] %> </li>
+										<li> Release: <%= popular['results'][a]['release_date'] %></li>
 									</ul>
 								</div>
 								<div class="btn-transform transform-vertical">
@@ -45,12 +49,13 @@
 						</div>
 						<div class="col-md-4 col-sm-12 col-xs-12">
 							<div class="mv-img-2">
-								<a href="#"><img src="http://bmk.clovery.si/dest/images/movies/guardians.png"
-										alt=""></a>
+								<a href="#"><%= image_tag("https://image.tmdb.org/t/p/original/#{popular['results'][a]['poster_path']}") %></a>
 							</div>
 						</div>
 					</div>
 				</div>
+				<%= a= a + 1; %>
+				<% end %>
 				<!--END-->
 			</div>
 		</div>
@@ -87,7 +92,7 @@
 							</div>
 						</div>
 						<% end %>
-						<% response = Faraday.get('https://api.themoviedb.org/3/movie/upcoming?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+						<% response = Faraday.get('https://api.themoviedb.org/3/movie/upcoming?api_key=&language=en-US&page=1') %>
 						<% data = JSON.parse(response.body) %>
 						<%= i=0; %>																
 						<%=	while i < 19 do %>
