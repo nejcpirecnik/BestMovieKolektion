@@ -3,10 +3,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="slider-single-item">
-			<% responsed = Faraday.get('https://api.themoviedb.org/3/movie/popular?api_key=&language=en-US&page=1') %>
+			<% responsed = Faraday.get('https://api.themoviedb.org/3/movie/popular?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
 			<% popular = JSON.parse(responsed.body) %>
 				<!--START-->
-				<%= a=0; %>																
+				<% a=0; %>																
 				<%=	while a < 5 do %>
 				<div class="movie-item">
 					<div class="row">
@@ -20,7 +20,13 @@
 								<h1><a href="#"><%= popular['results'][a]['original_title'] %><br>
 									 <span><%= popular['results'][a]['release_date'] %></span></a></h1>
 								<div class="social-btn">
-									<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+									<% responset = Faraday.get("https://api.themoviedb.org/3/movie/#{popular['results'][a]['id']}/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
+									<% trailer = JSON.parse(responset.body) %>
+									<% t=0; %>
+									<%= while trailer['results'][t]['type'] != 'Trailer' do %>
+									<% t=t+1 %>
+									<% end %>
+									<i class="ion-play"></i><%= link_to "Watch Trailer", "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "parent-btn" %>
 									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
 									<div class="hover-bnt">
 										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
@@ -54,7 +60,7 @@
 						</div>
 					</div>
 				</div>
-				<%= a= a + 1; %>
+				<% a= a + 1; %>
 				<% end %>
 				<!--END-->
 			</div>
@@ -92,10 +98,10 @@
 							</div>
 						</div>
 						<% end %>
-						<% response = Faraday.get('https://api.themoviedb.org/3/movie/upcoming?api_key=&language=en-US&page=1') %>
+						<% response = Faraday.get('https://api.themoviedb.org/3/movie/upcoming?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
 						<% data = JSON.parse(response.body) %>
-						<%= i=0; %>																
-						<%=	while i < 19 do %>
+						<% i=0; %>																
+						<%=	while i < 20 do %>
 						<div class="movie-item-style-2 movie-item-style-1">
 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
 						<div class="hvr-inner">
@@ -107,7 +113,7 @@
 							<p class="rate"><i class="ion-android-star"></i><span><%= data['results'][i]['vote_average'] %></span> /10</p>
 						</div>
 					</div>
-					<%= i = i + 1 %>
+					<% i = i + 1; %>
 					<% end %>
 				</div>
 				<div class="topbar-filter">
