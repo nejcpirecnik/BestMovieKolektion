@@ -26,7 +26,7 @@
 									<%= while trailer['results'][t]['type'] != 'Trailer' do %>
 									<% t=t+1 %>
 									<% end %>
-									<i class="ion-play"></i><%= link_to "Watch Trailer", "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "parent-btn" %>
+									<%= link_to "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "parent-btn" do %>  Watch trailer <% end %>
 									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
 									<div class="hover-bnt">
 										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
@@ -105,6 +105,7 @@
 						<div class="movie-item-style-2 movie-item-style-1">
 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
 						<div class="hvr-inner">
+							<%= link_to 'Read More', 'more' %><i class="ion-android-arrow-dropright"></i>
 						</div>
 						<div class="mv-item-infor">
 							<h6><a href="#">
@@ -117,20 +118,7 @@
 					<% end %>
 				</div>
 				<div class="topbar-filter">
-					<label>Movies per page: 18 </label>
-					<div class="pagination2">
-						<% if(@page * 18 > 18) %>
-							<%= link_to "previous page" , posts_path(page: @page - 1) %>
-								<% end %>
-									<% if(@page * 18 == 18) %>
-										<%= link_to "previous page" , posts_path(page: @page - 1) %>
-											|
-											<%= link_to "Next page" , posts_path(page: @page + 1) %>
-												<% end %>
-													<% if(@page * 18 < 18) %>
-														<%= link_to "Next page" , posts_path(page: @page + 1) %>
-															<% end %>
-					</div>
+					<label>Movies per page: 20 </label>
 				</div>
 			</div>
 		</div>

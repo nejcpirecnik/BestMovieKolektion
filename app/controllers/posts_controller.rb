@@ -2,13 +2,9 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: %i[ index show ]
 
-  POSTS_PER_PAGE = 18
-
   # GET /posts or /posts.json
   def index
-    @page = params.fetch(:page,0).to_i
-    @posts = Post.offset(@page * POSTS_PER_PAGE).limit(POSTS_PER_PAGE)
-    @vsiposti = Post.all
+    @posts = Post.all
   end
 
   # GET /posts/1 or /posts/1.json
@@ -65,7 +61,7 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_post
+    def set_post      
       @post = Post.find(params[:id])
     end
 
