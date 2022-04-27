@@ -48014,3 +48014,338 @@ Processing by PostsController#more as HTML
 Completed 200 OK in 1094ms (Views: 1087.9ms | ActiveRecord: 1.3ms | Allocations: 9136)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:39:07 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 19.5ms | Allocations: 6218)
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:87
+  Rendered posts/index.html.erb within layouts/application (Duration: 919.1ms | Allocations: 27668)
+  Rendered layout layouts/application.html.erb (Duration: 920.7ms | Allocations: 27789)
+Completed 200 OK in 925ms (Views: 912.1ms | ActiveRecord: 10.4ms | Allocations: 29223)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:44:12 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 7.5ms | Allocations: 2028)
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:87
+  Rendered posts/index.html.erb within layouts/application (Duration: 988.0ms | Allocations: 24467)
+  Rendered layout layouts/application.html.erb (Duration: 989.0ms | Allocations: 24844)
+Completed 200 OK in 995ms (Views: 989.0ms | ActiveRecord: 3.8ms | Allocations: 26367)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-27 15:44:13 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:44:28 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 7.9ms | Allocations: 2029)
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:87
+  Rendered posts/index.html.erb within layouts/application (Duration: 821.9ms | Allocations: 24484)
+  Rendered layout layouts/application.html.erb (Duration: 823.1ms | Allocations: 24862)
+Completed 200 OK in 827ms (Views: 821.7ms | ActiveRecord: 3.8ms | Allocations: 26319)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-27 15:44:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:46:57 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 7.9ms | Allocations: 2029)
+  Rendered posts/index.html.erb within layouts/application (Duration: 389.0ms | Allocations: 10628)
+  Rendered layout layouts/application.html.erb (Duration: 389.5ms | Allocations: 10702)
+Completed 500 Internal Server Error in 395ms (ActiveRecord: 1.7ms | Allocations: 12117)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `data' for #<ActionView::Base:0x00000000021138>):
+    49: 								<div class="btn-transform transform-vertical">
+    50: 									<div><a href="#" class="item item-1 redbtn">more detail</a></div>
+    51: 									<%= form_with url: "/more", method: :get do |form| %>
+    52: 										<%= form.hidden_field :post_id, :value => data['results'][a]['id'] %>
+    53: 										<%= form.submit "Read more", class: "item item-2 redbtn hvrbtn" %>
+    54: 									  <% end %>
+    55: 								</div>
+  
+app/views/posts/index.html.erb:52
+app/views/posts/index.html.erb:51
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:47:12 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 9.8ms | Allocations: 2029)
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:90
+  Rendered posts/index.html.erb within layouts/application (Duration: 973.1ms | Allocations: 27002)
+  Rendered layout layouts/application.html.erb (Duration: 974.0ms | Allocations: 27379)
+Completed 200 OK in 978ms (Views: 970.6ms | ActiveRecord: 5.4ms | Allocations: 28872)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-27 15:47:13 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/more?post_id=573164&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:47:16 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"573164", "commit"=>"Read more"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 475.8ms | Allocations: 5627)
+  Rendered layout layouts/application.html.erb (Duration: 476.2ms | Allocations: 5699)
+Completed 500 Internal Server Error in 494ms (ActiveRecord: 1.0ms | Allocations: 10860)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12:                 <% responset = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
+    13: 									<% trailer = JSON.parse(responset.body) %>
+    14: 									<% t=0; %>
+    15: 									<%= while trailer['results'][t]['type'] != 'Trailer' do %>
+    16: 									<% t=t+1 %>
+    17: 									<% end %>
+    18: 						<div class="btn-transform transform-vertical red">
+  
+app/views/posts/more.html.erb:15
+Started GET "/more?post_id=573164&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:49:47 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"573164", "commit"=>"Read more"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1139.2ms | Allocations: 8530)
+  Rendered layout layouts/application.html.erb (Duration: 1141.0ms | Allocations: 8908)
+Completed 200 OK in 1149ms (Views: 1143.1ms | ActiveRecord: 1.7ms | Allocations: 11583)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:50:34 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 9.4ms | Allocations: 1953)
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:90
+  Rendered posts/index.html.erb within layouts/application (Duration: 993.5ms | Allocations: 26909)
+  Rendered layout layouts/application.html.erb (Duration: 994.3ms | Allocations: 27006)
+Completed 200 OK in 999ms (Views: 990.9ms | ActiveRecord: 5.1ms | Allocations: 27662)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-27 15:50:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/more?post_id=615904&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:50:42 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"615904", "commit"=>"Read more"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1437.2ms | Allocations: 7960)
+  Rendered layout layouts/application.html.erb (Duration: 1437.8ms | Allocations: 8057)
+Completed 200 OK in 1449ms (Views: 1438.8ms | ActiveRecord: 2.3ms | Allocations: 9806)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:50:48 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 10.3ms | Allocations: 1389)
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:90
+  Rendered posts/index.html.erb within layouts/application (Duration: 919.6ms | Allocations: 25212)
+  Rendered layout layouts/application.html.erb (Duration: 920.0ms | Allocations: 25309)
+Completed 200 OK in 924ms (Views: 916.2ms | ActiveRecord: 5.1ms | Allocations: 25780)
+
+
+Started GET "/more?post_id=414906&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:50:54 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"414906", "commit"=>"Read more"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1285.5ms | Allocations: 10886)
+  Rendered layout layouts/application.html.erb (Duration: 1286.1ms | Allocations: 10983)
+Completed 200 OK in 1295ms (Views: 1287.1ms | ActiveRecord: 1.3ms | Allocations: 12732)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:52:03 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 9.1ms | Allocations: 1389)
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:90
+  Rendered posts/index.html.erb within layouts/application (Duration: 929.3ms | Allocations: 25207)
+  Rendered layout layouts/application.html.erb (Duration: 930.0ms | Allocations: 25304)
+Completed 200 OK in 933ms (Views: 927.1ms | ActiveRecord: 4.3ms | Allocations: 25775)
+
+
+Started GET "/more?post_id=809140&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:52:19 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"809140", "commit"=>"Read more"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1203.7ms | Allocations: 7323)
+  Rendered layout layouts/application.html.erb (Duration: 1204.1ms | Allocations: 7391)
+Completed 500 Internal Server Error in 1214ms (ActiveRecord: 1.7ms | Allocations: 9105)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    176: 												<% if keywords['keywords'] != [] %>
+    177: 													<% k=0; %>
+    178: 													<% while k < 3 do %>
+    179: 														<span class="time"><a href="#"><%= keywords['keywords'][k]['name'] %></a></span>
+    180: 														<% k=k+1; %>
+    181: 													<% end %>
+    182: 													<% else %>
+  
+app/views/posts/more.html.erb:179
+Started GET "/more?post_id=809140&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:54:33 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"809140", "commit"=>"Read more"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 460.0ms | Allocations: 9297)
+  Rendered layout layouts/application.html.erb (Duration: 460.5ms | Allocations: 9371)
+Completed 500 Internal Server Error in 470ms (ActiveRecord: 1.3ms | Allocations: 11960)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007fbff8cfde28>::NULL):
+    175: 												<% keywords = JSON.parse(responsek.body) %>
+    176: 												<% if keywords['keywords'] != [] %>
+    177: 													<% k=0; %>
+    178: 													<% while k != NULL do %>
+    179: 														<span class="time"><a href="#"><%= keywords['keywords'][k]['name'] %></a></span>
+    180: 														<% k=k+1; %>
+    181: 													<% end %>
+  
+app/views/posts/more.html.erb:178
+Started GET "/more?post_id=809140&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:54:43 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"809140", "commit"=>"Read more"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 371.8ms | Allocations: 9310)
+  Rendered layout layouts/application.html.erb (Duration: 372.1ms | Allocations: 9384)
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 0.9ms | Allocations: 12192)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    176: 												<% if keywords['keywords'] != [] %>
+    177: 													<% k=0; %>
+    178: 													<% while k != '' do %>
+    179: 														<span class="time"><a href="#"><%= keywords['keywords'][k]['name'] %></a></span>
+    180: 														<% k=k+1; %>
+    181: 													<% end %>
+    182: 													<% else %>
+  
+app/views/posts/more.html.erb:179
+Started GET "/more?post_id=809140&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:54:53 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"809140", "commit"=>"Read more"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 389.0ms | Allocations: 9299)
+  Rendered layout layouts/application.html.erb (Duration: 389.6ms | Allocations: 9373)
+Completed 500 Internal Server Error in 402ms (ActiveRecord: 1.1ms | Allocations: 12181)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    176: 												<% if keywords['keywords'] != [] %>
+    177: 													<% k=0; %>
+    178: 													<% while k != [] do %>
+    179: 														<span class="time"><a href="#"><%= keywords['keywords'][k]['name'] %></a></span>
+    180: 														<% k=k+1; %>
+    181: 													<% end %>
+    182: 													<% else %>
+  
+app/views/posts/more.html.erb:179
+Started GET "/more?post_id=809140&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:55:11 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"809140", "commit"=>"Read more"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 938.6ms | Allocations: 9612)
+  Rendered layout layouts/application.html.erb (Duration: 941.1ms | Allocations: 9990)
+Completed 200 OK in 953ms (Views: 944.4ms | ActiveRecord: 1.2ms | Allocations: 12847)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:55:47 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 8.4ms | Allocations: 1935)
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:90
+  Rendered posts/index.html.erb within layouts/application (Duration: 1583.1ms | Allocations: 26864)
+  Rendered layout layouts/application.html.erb (Duration: 1583.9ms | Allocations: 26961)
+Completed 200 OK in 1587ms (Views: 1580.8ms | ActiveRecord: 4.3ms | Allocations: 27616)
+
+
+Started GET "/more?post_id=508947&commit=Read+more" for 127.0.0.1 at 2022-04-27 15:56:00 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"508947", "commit"=>"Read more"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1363.4ms | Allocations: 10003)
+  Rendered layout layouts/application.html.erb (Duration: 1364.2ms | Allocations: 10100)
+Completed 200 OK in 1377ms (Views: 1365.3ms | ActiveRecord: 1.9ms | Allocations: 11850)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-27 15:56:25 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:89
+  Rendered layouts/_navbar.html.erb (Duration: 9.6ms | Allocations: 1389)
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:90
+  Rendered posts/index.html.erb within layouts/application (Duration: 889.8ms | Allocations: 25204)
+  Rendered layout layouts/application.html.erb (Duration: 890.3ms | Allocations: 25301)
+Completed 200 OK in 892ms (Views: 887.1ms | ActiveRecord: 3.8ms | Allocations: 25772)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-27 15:56:26 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  

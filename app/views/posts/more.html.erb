@@ -11,6 +11,7 @@
                 <div class="movie-btn">	
                 <% responset = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
 									<% trailer = JSON.parse(responset.body) %>
+									<% if trailer['results'] != [] %>
 									<% t=0; %>
 									<%= while trailer['results'][t]['type'] != 'Trailer' do %>
 									<% t=t+1 %>
@@ -19,6 +20,7 @@
 							<div> <%= link_to "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "item item-1 redbtn" do %> <i class="ion-play"></i> Watch trailer<% end %></div>
                             <div> <%= link_to "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "item item-2 redbtn" do %><i class="ion-play"></i><% end %></div>
 						</div>
+						<% end %>
 						<div class="btn-transform transform-vertical">
 							<div><a href="#" class="item item-1 yellowbtn"> <i class="ion-card"></i> Buy ticket</a></div>
 							<div><a href="#" class="item item-2 yellowbtn"><i class="ion-card"></i></a></div>
@@ -173,7 +175,7 @@
 												<% keywords = JSON.parse(responsek.body) %>
 												<% if keywords['keywords'] != [] %>
 													<% k=0; %>
-													<% while k < 3 do %>
+													<% while k < 1 do %>
 														<span class="time"><a href="#"><%= keywords['keywords'][k]['name'] %></a></span>
 														<% k=k+1; %>
 													<% end %>
