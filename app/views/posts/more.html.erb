@@ -1,4 +1,4 @@
-<% response = Faraday.get('https://api.themoviedb.org/3/movie/453395?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+<% response = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
 <% data = JSON.parse(response.body) %>
 <div class="hero mv-single-hero">
 </div>
@@ -9,7 +9,7 @@
 				<div class="movie-img sticky-sb">
                     <%= image_tag("https://image.tmdb.org/t/p/original/#{data['poster_path']}") %>
                 <div class="movie-btn">	
-                <% responset = Faraday.get("https://api.themoviedb.org/3/movie/453395/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
+                <% responset = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
 									<% trailer = JSON.parse(responset.body) %>
 									<% t=0; %>
 									<%= while trailer['results'][t]['type'] != 'Trailer' do %>
@@ -44,16 +44,16 @@
 					<div class="movie-rate">
 						<div class="rate">
 							<i class="ion-android-star"></i>
-							<p><span><%= data['vote_average'] %></span> /10<br>
+							<p><span><%= data['vote_average'].to_i %></span> /10<br>
 							</p>
 						</div>
 						<div class="rate-star">
                             <% s = 0; %>
-                            <% while s < data['vote_average'] do %>
+                            <% while s < data['vote_average'].to_i do %>
 							<i class="ion-ios-star"></i>
                             <% s=s+1; %>
                             <% end %>
-                            <% total = 10 - s; %>
+                            <% total = 10 - s.to_i; %>
                             <% d = 0; %>
                             <% while d < total do %>
                             <i class="ion-ios-star-outline"></i>
@@ -94,7 +94,7 @@
                                             <h4>cast</h4>
                                                 <a href="#" class="time">Full Cast & Crew  <i class="ion-ios-arrow-right"></i></a>
                                             </div>											
-                                            <% responsec = Faraday.get('https://api.themoviedb.org/3/movie/453395/credits?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+                                            <% responsec = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/credits?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
                                             <% cast = JSON.parse(responsec.body) %>
                                             <% c = 0; %>
                                             <% while c < 5 %>
@@ -145,7 +145,7 @@
 						            		<div class="sb-it">
 						            			<h6>Writer: </h6>
                                                 <% w = 0; %>
-                                                <% while cast['crew'][w]['known_for_department'] != 'Writing' %>
+                                                <% while cast['crew'][w]['department'] != 'Writing' %>
                                                     <% w=w+1; %>
                                                 <% end %>
 						            			<p><a href="#"><%= cast['crew'][w]['name'] %></a></p>
@@ -169,12 +169,16 @@
 						            		<div class="sb-it">
 						            			<h6>Plot Keywords:</h6>
 						            			<p class="tags">
-												<% responsek = Faraday.get('https://api.themoviedb.org/3/movie/453395/keywords?api_key=e766900bdc5dd5e8399627d7ec66594f') %>
+												<% responsek = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/keywords?api_key=e766900bdc5dd5e8399627d7ec66594f") %>
 												<% keywords = JSON.parse(responsek.body) %>
+												<% if keywords['keywords'] != [] %>
 													<% k=0; %>
 													<% while k < 3 do %>
 														<span class="time"><a href="#"><%= keywords['keywords'][k]['name'] %></a></span>
 														<% k=k+1; %>
+													<% end %>
+													<% else %>
+													<span class="time">Keywords for this movie are nonexistent </a></span>
 													<% end %>
 						            			</p>
 						            		</div>
@@ -680,7 +684,7 @@
 					       	 			<div class="topbar-filter">
 											<p>Found <span>6 movies</span> in total</p>
 										</div>
-										<% responser = Faraday.get('https://api.themoviedb.org/3/movie/453395/similar?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+										<% responser = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/similar?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1") %>
 										<% related = JSON.parse(responser.body) %>
 										<% r = 0; %>
 										<% while r < 6 do%>

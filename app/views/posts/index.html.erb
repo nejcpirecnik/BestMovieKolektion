@@ -105,13 +105,17 @@
 						<div class="movie-item-style-2 movie-item-style-1">
 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
 						<div class="hvr-inner">
-							<%= link_to 'Read More', 'more' %><i class="ion-android-arrow-dropright"></i>
+							<%= form_with url: "/more", method: :get do |form| %>
+								<%= form.hidden_field :post_id, :value => data['results'][i]['id'] %>
+								<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
+							  <% end %>
+							  
 						</div>
 						<div class="mv-item-infor">
 							<h6><a href="#">
 										<%= data['results'][i]['original_title'] %>
 								</a></h6>
-							<p class="rate"><i class="ion-android-star"></i><span><%= data['results'][i]['vote_average'] %></span> /10</p>
+							<p class="rate"><i class="ion-android-star"></i><span><%= data['results'][i]['vote_average'].to_i %></span> /10</p>
 						</div>
 					</div>
 					<% i = i + 1; %>
