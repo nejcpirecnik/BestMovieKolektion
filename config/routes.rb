@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   get 'more', to: 'posts#more'
 
+  get 'genres', to: 'posts#genres'
+
 end

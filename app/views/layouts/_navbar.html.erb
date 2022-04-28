@@ -41,16 +41,13 @@
                 <li><a href="aboutv2.html">About Us 02</a></li>
               </ul>
             </li> -->
-            <li><a href="moviegrid.html">Action</a></li>
-            <li><a href="moviegridfw.html">Comedy</a></li>
-            <li class="it-last"><a href="moviesingle.html">Fantasy</a></li>
-            <li><a href="moviegridfw.html">Drama</a></li>
-            <li><a href="movielist.html">Horror</a></li>
-            <li class="it-last"><a href="moviesingle.html">Mystery</a></li>
-            <li class="it-last"><a href="moviesingle.html">Romance</a></li>
-            <li class="it-last"><a href="moviesingle.html">Adventure</a></li>
-            <li class="it-last"><a href="moviesingle.html">Sci-fi</a></li>
-
+            <% responseg = Faraday.get('https://api.themoviedb.org/3/genre/movie/list?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+            <% genres = JSON.parse(responseg.body) %>
+            <% g=0; %>
+            <% while g < 18 do %>
+              <li><%= link_to genres['genres'][g]['name'], genres_url(:genre_id=>genres['genres'][g]['id']) %></li>
+            <% g=g+1; %>
+            <% end %>
           </ul>
         </li>
         <li class="dropdown first">
@@ -79,8 +76,7 @@
           Profile <i class="fa fa-angle-down" aria-hidden="true"></i>
           </a>
           <ul class="dropdown-menu level1">
-            <li><%= link_to "settings", edit_user_registration_path %></li>
-            <li><a href="userfavoritelist.html">view profile</a></li>
+            <li><%= link_to "View profile", edit_user_registration_path %></li>
             <li><a href="userprofile.html">something</a></li>
             <li class="it-last"><a href="userrate.html">user rate</a></li>
           </ul>

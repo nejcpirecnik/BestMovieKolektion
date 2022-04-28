@@ -1,0 +1,17 @@
+<!-- Ta stran deluje samo olepsaj jo se nejc --> 
+<div id="moviesrelated" class="tab">
+<% responseg = Faraday.get("https://api.themoviedb.org/3/discover/movie?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=#{params[:genre_id]}&with_watch_monetization_types=flatrate") %>
+<% genres = JSON.parse(responseg.body) %>
+<% r = 0; %>
+<% while r <= 19 do%>
+<div class="movie-item-style-2">
+<%= image_tag("https://image.tmdb.org/t/p/original/#{genres['results'][r]['poster_path']}", style: "width:251px; height:170px;") %>
+<div class="mv-item-infor">
+        <h6><%= link_to genres['results'][r]['original_title'], more_url(:post_id=>genres['results'][r]['id']) %> <span>(<%= genres['results'][r]['release_date'] %>)</span></h6>
+        <p class="rate"><i class="ion-android-star"></i><span><%= genres['results'][r]['vote_average'] %></span> /10</p>
+        <p class="describe"><%= genres['results'][r]['overview']%></p>
+    </div>
+</div>
+<% r=r+1; %>
+<% end %>
+</div>
