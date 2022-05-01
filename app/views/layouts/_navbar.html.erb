@@ -54,32 +54,15 @@
           <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
           celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
           </a>
-          <ul class="dropdown-menu level1">
-            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
-            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
-            <li><a href="celebritylist.html">celebrity list</a></li>
-            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
-          </ul>
         </li>
         <li class="dropdown first">
           <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
           news <i class="fa fa-angle-down" aria-hidden="true"></i>
           </a>
-          <ul class="dropdown-menu level1">
-            <li><a href="bloglist.html">blog List</a></li>
-            <li><a href="bloggrid.html">blog Grid</a></li>
-            <li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
-          </ul>
         </li>
         <li class="dropdown first">
-          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-          Profile <i class="fa fa-angle-down" aria-hidden="true"></i>
-          </a>
-          <ul class="dropdown-menu level1">
-            <li><%= link_to "View profile", edit_user_registration_path %></li>
-            <li><a href="userprofile.html">something</a></li>
-            <li class="it-last"><a href="userrate.html">user rate</a></li>
-          </ul>
+          <%= link_to edit_user_registration_path, class: "btn btn-default dropdown-toggle lv1" do %>
+          Profile <i class="fa fa-angle-down" aria-hidden="true"></i> <% end %>
         </li>
       </ul>
       <% if(!user_signed_in?)%>

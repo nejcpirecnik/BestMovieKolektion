@@ -79,6 +79,7 @@
 				</div>
 				<h1 style= "color:white;"> UPCOMING MOVIES </h1>
 				<br />
+				<br />
 				<div class="flex-wrap-movielist mv-grid-fw">
 					<% @posts.each do |post| %>
 						<div class="movie-item-style-2 movie-item-style-1">
@@ -110,14 +111,68 @@
 							<h6><a href="#">
 										<%= data['results'][i]['original_title'] %>
 								</a></h6>
-							<p class="rate"><i class="ion-android-star"></i><span><%= data['results'][i]['vote_average'] %></span> /10</p>
+							<p class="rate"><i class="ion-android-star"></i><span><%= data['results'][i]['vote_average'].to_i %></span> /10</p>
 						</div>
 					</div>
 					<% i = i + 1; %>
 					<% end %>
 				</div>
+				<h1 style= "color:white;"> TOP RATED MOVIES </h1>
+				<br />
+				<br />
+				<div class="flex-wrap-movielist mv-grid-fw">
+					<% responset = Faraday.get('https://api.themoviedb.org/3/movie/top_rated?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+					<% top = JSON.parse(responset.body) %>
+					<% t=0; %>
+					<% while t <= 19 %>
+					<div class="movie-item-style-2 movie-item-style-1">
+					<%= image_tag("https://image.tmdb.org/t/p/original/#{top['results'][t]['poster_path']}") %>
+					<div class="hvr-inner">
+						<%= form_with url: "/more", method: :get do |form| %>
+							<%= form.hidden_field :post_id, :value => top['results'][t]['id'] %>
+							<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
+						<% end %>						  
+					</div>
+					<div class="mv-item-infor">
+						<h6><a href="#">
+									<%= top['results'][t]['original_title'] %>
+							</a></h6>
+						<p class="rate"><i class="ion-android-star"></i><span><%= top['results'][t]['vote_average'].to_i %></span> /10</p>
+					</div>
+				</div>
+				<% t = t + 1; %>
+				<% end %>
+			</div>
+
+			<h1 style= "color:white;"> MOVIES TRENDING THIS WEEK </h1>
+			<br />
+			<br />
+			<div class="flex-wrap-movielist mv-grid-fw">
+				<% responsetw = Faraday.get('https://api.themoviedb.org/3/trending/movie/week?api_key=e766900bdc5dd5e8399627d7ec66594f') %>
+				<% trendingw = JSON.parse(responsetw.body) %>
+				<% tw=0; %>
+				<% while tw <= 19 %>
+				<div class="movie-item-style-2 movie-item-style-1">
+				<%= image_tag("https://image.tmdb.org/t/p/original/#{trendingw['results'][tw]['poster_path']}") %>
+				<div class="hvr-inner">
+					<%= form_with url: "/more", method: :get do |form| %>
+						<%= form.hidden_field :post_id, :value => trendingw['results'][tw]['id'] %>
+						<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
+					<% end %>						  
+				</div>
+				<div class="mv-item-infor">
+					<h6><a href="#">
+								<%= trendingw['results'][tw]['original_title'] %>
+						</a></h6>
+					<p class="rate"><i class="ion-android-star"></i><span><%= trendingw['results'][tw]['vote_average'].to_i %></span> /10</p>
+				</div>
+			</div>
+			<% tw = tw + 1; %>
+			<% end %>
+		</div>
+
 				<div class="topbar-filter">
-					<label>Movies per page: 20 </label>
+					<label>Movies per page: 57 </label>
 				</div>
 			</div>
 		</div>

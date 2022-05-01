@@ -57554,3 +57554,1774 @@ Started GET "/images/logo1.png" for 127.0.0.1 at 2022-04-28 15:43:44 +0200
   
 ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
   
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:03:05 +0200
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 243.4ms | Allocations: 4070)
+  [1m[36mPost Load (5.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 2223.4ms | Allocations: 30875)
+  Rendered layout layouts/application.html.erb (Duration: 2226.9ms | Allocations: 31326)
+Completed 200 OK in 2241ms (Views: 2225.0ms | ActiveRecord: 5.7ms | Allocations: 35884)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:03:07 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:05:05 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 131.3ms | Allocations: 3144)
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1057.6ms | Allocations: 29328)
+  Rendered layout layouts/application.html.erb (Duration: 1059.2ms | Allocations: 29707)
+Completed 200 OK in 1066ms (Views: 1061.3ms | ActiveRecord: 2.4ms | Allocations: 31185)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:05:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:07:21 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 1635)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2812)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2888)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4282)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to root_path do %>
+          <%= image_tag 'http://bmk.clovery.si/dest/images/BMKlogo.png', style: 'height:75px; width:75px;' %>
+        <% end %>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          favourites <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Library</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          genres<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <% responseg = Faraday.get('https://api.themoviedb.org/3/genre/movie/list?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+            <% genres = JSON.parse(responseg.body) %>
+            <% g=0; %>
+            <% while g < 18 do %>
+              <li><%= link_to genres['genres'][g]['name'], genres_url(:genre_id=>genres['genres'][g]['id']) %></li>
+            <% g=g+1; %>
+            <% end %>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="dropdown first">
+          <%= link_to "profile", edit_user_registration_path, class: "btn btn-default dropdown-toggle lv1",data-toggle: "dropdown", data-hover: "dropdown" %>
+          Profile <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      <% if(!user_signed_in?)%>
+      <ul class="nav navbar-nav flex-child-menu menu-right">         
+        <li><%= link_to "Login", new_user_session_path, class:"nav-link active" %></li>
+        <li><%= link_to "Register", new_user_registration_path, class:"nav-link active" %></li>
+      </ul>
+      <% else %>
+      <ul class="nav navbar-nav flex-child-menu menu-right">         
+        <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <% end %>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to root_path do %>
+15:              <%= image_tag 'http://bmk.clovery.si/dest/images/BMKlogo.png', style: 'height:75px; width:75px;' %>
+16:            <% end %>
+17:          </div>
+18:        <!-- Collect the nav links, forms, and other content for toggling -->
+19:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+20:          <ul class="nav navbar-nav flex-child-menu menu-left">
+21:            <li class="hidden">
+22:              <a href="#page-top"></a>
+23:            </li>
+24:            <li class="dropdown first">
+25:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+26:              favourites <i class="fa fa-angle-down" aria-hidden="true"></i>
+27:              </a>
+28:              <ul class="dropdown-menu level1">
+29:                <li><a href="index.html">Library</a></li>
+30:              </ul>
+31:            </li>	
+32:            <li class="dropdown first">
+33:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+34:              genres<i class="fa fa-angle-down" aria-hidden="true"></i>
+35:              </a>
+36:              <ul class="dropdown-menu level1">
+37:                <!-- <li class="dropdown">
+38:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+39:                  <ul class="dropdown-menu level2">
+40:                    <li><a href="aboutv1.html">About Us 01</a></li>
+41:                    <li><a href="aboutv2.html">About Us 02</a></li>
+42:                  </ul>
+43:                </li> -->
+44:                <% responseg = Faraday.get('https://api.themoviedb.org/3/genre/movie/list?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+45:                <% genres = JSON.parse(responseg.body) %>
+46:                <% g=0; %>
+47:                <% while g < 18 do %>
+48:                  <li><%= link_to genres['genres'][g]['name'], genres_url(:genre_id=>genres['genres'][g]['id']) %></li>
+49:                <% g=g+1; %>
+50:                <% end %>
+51:              </ul>
+52:            </li>
+53:            <li class="dropdown first">
+54:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+55:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+56:              </a>
+57:              <ul class="dropdown-menu level1">
+58:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+59:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+60:                <li><a href="celebritylist.html">celebrity list</a></li>
+61:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+62:              </ul>
+63:            </li>
+64:            <li class="dropdown first">
+65:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+66:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+67:              </a>
+68:            </li>
+69:            <li class="dropdown first">
+70:              <%= link_to "profile", edit_user_registration_path, class: "btn btn-default dropdown-toggle lv1",data-toggle: "dropdown", data-hover: "dropdown" %>
+71:              Profile <i class="fa fa-angle-down" aria-hidden="true"></i>
+72:              </a>
+73:            </li>
+74:          </ul>
+75:          <% if(!user_signed_in?)%>
+76:          <ul class="nav navbar-nav flex-child-menu menu-right">         
+77:            <li><%= link_to "Login", new_user_session_path, class:"nav-link active" %></li>
+78:            <li><%= link_to "Register", new_user_registration_path, class:"nav-link active" %></li>
+79:          </ul>
+80:          <% else %>
+81:          <ul class="nav navbar-nav flex-child-menu menu-right">         
+82:            <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+83:          </ul>
+84:          <% end %>
+85:        </div>
+86:      <!-- /.navbar-collapse -->
+87:      </nav>
+88:      <!-- search form -->
+89:    </div>
+90:    </header>
+  
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/posts/index.html.erb:1
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:08:05 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 1.8ms | Allocations: 1617)
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2795)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2870)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 4259)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to root_path do %>
+          <%= image_tag 'http://bmk.clovery.si/dest/images/BMKlogo.png', style: 'height:75px; width:75px;' %>
+        <% end %>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          favourites <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Library</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          genres<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <% responseg = Faraday.get('https://api.themoviedb.org/3/genre/movie/list?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+            <% genres = JSON.parse(responseg.body) %>
+            <% g=0; %>
+            <% while g < 18 do %>
+              <li><%= link_to genres['genres'][g]['name'], genres_url(:genre_id=>genres['genres'][g]['id']) %></li>
+            <% g=g+1; %>
+            <% end %>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="dropdown first">
+          <%= link_to "profile", edit_user_registration_path, class: "btn btn-default dropdown-toggle lv1",data-toggle: "dropdown", data-hover: "dropdown" %>
+          Profile <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </li>
+      </ul>
+      <% if(!user_signed_in?)%>
+      <ul class="nav navbar-nav flex-child-menu menu-right">         
+        <li><%= link_to "Login", new_user_session_path, class:"nav-link active" %></li>
+        <li><%= link_to "Register", new_user_registration_path, class:"nav-link active" %></li>
+      </ul>
+      <% else %>
+      <ul class="nav navbar-nav flex-child-menu menu-right">         
+        <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <% end %>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to root_path do %>
+15:              <%= image_tag 'http://bmk.clovery.si/dest/images/BMKlogo.png', style: 'height:75px; width:75px;' %>
+16:            <% end %>
+17:          </div>
+18:        <!-- Collect the nav links, forms, and other content for toggling -->
+19:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+20:          <ul class="nav navbar-nav flex-child-menu menu-left">
+21:            <li class="hidden">
+22:              <a href="#page-top"></a>
+23:            </li>
+24:            <li class="dropdown first">
+25:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+26:              favourites <i class="fa fa-angle-down" aria-hidden="true"></i>
+27:              </a>
+28:              <ul class="dropdown-menu level1">
+29:                <li><a href="index.html">Library</a></li>
+30:              </ul>
+31:            </li>	
+32:            <li class="dropdown first">
+33:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+34:              genres<i class="fa fa-angle-down" aria-hidden="true"></i>
+35:              </a>
+36:              <ul class="dropdown-menu level1">
+37:                <!-- <li class="dropdown">
+38:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+39:                  <ul class="dropdown-menu level2">
+40:                    <li><a href="aboutv1.html">About Us 01</a></li>
+41:                    <li><a href="aboutv2.html">About Us 02</a></li>
+42:                  </ul>
+43:                </li> -->
+44:                <% responseg = Faraday.get('https://api.themoviedb.org/3/genre/movie/list?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+45:                <% genres = JSON.parse(responseg.body) %>
+46:                <% g=0; %>
+47:                <% while g < 18 do %>
+48:                  <li><%= link_to genres['genres'][g]['name'], genres_url(:genre_id=>genres['genres'][g]['id']) %></li>
+49:                <% g=g+1; %>
+50:                <% end %>
+51:              </ul>
+52:            </li>
+53:            <li class="dropdown first">
+54:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+55:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+56:              </a>
+57:              <ul class="dropdown-menu level1">
+58:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+59:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+60:                <li><a href="celebritylist.html">celebrity list</a></li>
+61:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+62:              </ul>
+63:            </li>
+64:            <li class="dropdown first">
+65:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+66:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+67:              </a>
+68:            </li>
+69:            <li class="dropdown first">
+70:              <%= link_to "profile", edit_user_registration_path, class: "btn btn-default dropdown-toggle lv1",data-toggle: "dropdown", data-hover: "dropdown" %>
+71:              Profile <i class="fa fa-angle-down" aria-hidden="true"></i>
+72:            </li>
+73:          </ul>
+74:          <% if(!user_signed_in?)%>
+75:          <ul class="nav navbar-nav flex-child-menu menu-right">         
+76:            <li><%= link_to "Login", new_user_session_path, class:"nav-link active" %></li>
+77:            <li><%= link_to "Register", new_user_registration_path, class:"nav-link active" %></li>
+78:          </ul>
+79:          <% else %>
+80:          <ul class="nav navbar-nav flex-child-menu menu-right">         
+81:            <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+82:          </ul>
+83:          <% end %>
+84:        </div>
+85:      <!-- /.navbar-collapse -->
+86:      </nav>
+87:      <!-- search form -->
+88:    </div>
+89:    </header>
+  
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting ')'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting ')'
+app/views/posts/index.html.erb:1
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:08:29 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 2.3ms | Allocations: 1629)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2807)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2883)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 4288)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="ht-header full-width-hd">
+<div class="row">
+  <nav id="mainNav" class="navbar navbar-default navbar-custom">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header logo">
+        <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        </div>
+        <%= link_to root_path do %>
+          <%= image_tag 'http://bmk.clovery.si/dest/images/BMKlogo.png', style: 'height:75px; width:75px;' %>
+        <% end %>
+      </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav flex-child-menu menu-left">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          favourites <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="index.html">Library</a></li>
+          </ul>
+        </li>	
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          genres<i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <!-- <li class="dropdown">
+              <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu level2">
+                <li><a href="aboutv1.html">About Us 01</a></li>
+                <li><a href="aboutv2.html">About Us 02</a></li>
+              </ul>
+            </li> -->
+            <% responseg = Faraday.get('https://api.themoviedb.org/3/genre/movie/list?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+            <% genres = JSON.parse(responseg.body) %>
+            <% g=0; %>
+            <% while g < 18 do %>
+              <li><%= link_to genres['genres'][g]['name'], genres_url(:genre_id=>genres['genres'][g]['id']) %></li>
+            <% g=g+1; %>
+            <% end %>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu level1">
+            <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+            <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+            <li><a href="celebritylist.html">celebrity list</a></li>
+            <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+          </ul>
+        </li>
+        <li class="dropdown first">
+          <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+          news <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="dropdown first">
+          <%= link_to edit_user_registration_path, class: "btn btn-default dropdown-toggle lv1",data-toggle: "dropdown", data-hover: "dropdown" do %>
+          Profile <i class="fa fa-angle-down" aria-hidden="true"></i> <% end %>
+        </li>
+      </ul>
+      <% if(!user_signed_in?)%>
+      <ul class="nav navbar-nav flex-child-menu menu-right">         
+        <li><%= link_to "Login", new_user_session_path, class:"nav-link active" %></li>
+        <li><%= link_to "Register", new_user_registration_path, class:"nav-link active" %></li>
+      </ul>
+      <% else %>
+      <ul class="nav navbar-nav flex-child-menu menu-right">         
+        <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <% end %>
+    </div>
+  <!-- /.navbar-collapse -->
+  </nav>
+  <!-- search form -->
+</div>
+</header>
+):
+1:    <header class="ht-header full-width-hd">
+2:    <div class="row">
+3:      <nav id="mainNav" class="navbar navbar-default navbar-custom">
+4:        <!-- Brand and toggle get grouped for better mobile display -->
+5:        <div class="navbar-header logo">
+6:            <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+7:              <span class="sr-only">Toggle navigation</span>
+8:              <div id="nav-icon1">
+9:              <span></span>
+10:              <span></span>
+11:              <span></span>
+12:            </div>
+13:            </div>
+14:            <%= link_to root_path do %>
+15:              <%= image_tag 'http://bmk.clovery.si/dest/images/BMKlogo.png', style: 'height:75px; width:75px;' %>
+16:            <% end %>
+17:          </div>
+18:        <!-- Collect the nav links, forms, and other content for toggling -->
+19:        <div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+20:          <ul class="nav navbar-nav flex-child-menu menu-left">
+21:            <li class="hidden">
+22:              <a href="#page-top"></a>
+23:            </li>
+24:            <li class="dropdown first">
+25:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+26:              favourites <i class="fa fa-angle-down" aria-hidden="true"></i>
+27:              </a>
+28:              <ul class="dropdown-menu level1">
+29:                <li><a href="index.html">Library</a></li>
+30:              </ul>
+31:            </li>	
+32:            <li class="dropdown first">
+33:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+34:              genres<i class="fa fa-angle-down" aria-hidden="true"></i>
+35:              </a>
+36:              <ul class="dropdown-menu level1">
+37:                <!-- <li class="dropdown">
+38:                  <a href="#">about us <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+39:                  <ul class="dropdown-menu level2">
+40:                    <li><a href="aboutv1.html">About Us 01</a></li>
+41:                    <li><a href="aboutv2.html">About Us 02</a></li>
+42:                  </ul>
+43:                </li> -->
+44:                <% responseg = Faraday.get('https://api.themoviedb.org/3/genre/movie/list?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US') %>
+45:                <% genres = JSON.parse(responseg.body) %>
+46:                <% g=0; %>
+47:                <% while g < 18 do %>
+48:                  <li><%= link_to genres['genres'][g]['name'], genres_url(:genre_id=>genres['genres'][g]['id']) %></li>
+49:                <% g=g+1; %>
+50:                <% end %>
+51:              </ul>
+52:            </li>
+53:            <li class="dropdown first">
+54:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+55:              celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+56:              </a>
+57:              <ul class="dropdown-menu level1">
+58:                <li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+59:                <li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+60:                <li><a href="celebritylist.html">celebrity list</a></li>
+61:                <li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+62:              </ul>
+63:            </li>
+64:            <li class="dropdown first">
+65:              <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+66:              news <i class="fa fa-angle-down" aria-hidden="true"></i>
+67:              </a>
+68:            </li>
+69:            <li class="dropdown first">
+70:              <%= link_to edit_user_registration_path, class: "btn btn-default dropdown-toggle lv1",data-toggle: "dropdown", data-hover: "dropdown" do %>
+71:              Profile <i class="fa fa-angle-down" aria-hidden="true"></i> <% end %>
+72:            </li>
+73:          </ul>
+74:          <% if(!user_signed_in?)%>
+75:          <ul class="nav navbar-nav flex-child-menu menu-right">         
+76:            <li><%= link_to "Login", new_user_session_path, class:"nav-link active" %></li>
+77:            <li><%= link_to "Register", new_user_registration_path, class:"nav-link active" %></li>
+78:          </ul>
+79:          <% else %>
+80:          <ul class="nav navbar-nav flex-child-menu menu-right">         
+81:            <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+82:          </ul>
+83:          <% end %>
+84:        </div>
+85:      <!-- /.navbar-collapse -->
+86:      </nav>
+87:      <!-- search form -->
+88:    </div>
+89:    </header>
+  
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected `do' for block, expecting `end'
+app/views/layouts/_navbar.html.erb:91: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected `do' for block, expecting `end'
+app/views/layouts/_navbar.html.erb:91: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected `do' for block, expecting `end'
+app/views/layouts/_navbar.html.erb:91: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected `do' for block, expecting `end'
+app/views/layouts/_navbar.html.erb:91: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected `do' for block, expecting `end'
+app/views/layouts/_navbar.html.erb:91: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting =>
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected ':', expecting `end'
+app/views/layouts/_navbar.html.erb:70: syntax error, unexpected `do' for block, expecting `end'
+app/views/layouts/_navbar.html.erb:91: syntax error, unexpected `end', expecting end-of-input
+app/views/posts/index.html.erb:1
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:08:49 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navbar.html.erb (Duration: 119.6ms | Allocations: 3168)
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1057.4ms | Allocations: 29330)
+  Rendered layout layouts/application.html.erb (Duration: 1059.0ms | Allocations: 29708)
+Completed 200 OK in 1064ms (Views: 1060.0ms | ActiveRecord: 2.1ms | Allocations: 31149)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:08:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2022-05-01 14:08:53 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 350)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-01 14:08:53 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 906)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 4363)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4496)
+Completed 200 OK in 38ms (Views: 13.2ms | ActiveRecord: 9.4ms | Allocations: 11421)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-05-01 14:08:56 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zanluka.hojnik@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "zanluka.hojnik@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/edit
+Completed 302 Found in 355ms (ActiveRecord: 4.9ms | Allocations: 6012)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2022-05-01 14:08:57 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 237)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2478)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2606)
+Completed 200 OK in 20ms (Views: 12.1ms | ActiveRecord: 1.4ms | Allocations: 5393)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-01 14:08:59 +0200
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 1.6ms | Allocations: 1894)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:08:59 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:74
+  Rendered layouts/_navbar.html.erb (Duration: 104.2ms | Allocations: 3778)
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:09:00 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:74
+  Rendered layouts/_navbar.html.erb (Duration: 117.5ms | Allocations: 9668)
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 940.2ms | Allocations: 42043)
+  Rendered layout layouts/application.html.erb (Duration: 943.4ms | Allocations: 42381)
+Completed 200 OK in 946ms (Views: 940.7ms | ActiveRecord: 3.9ms | Allocations: 42880)
+
+
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 972.1ms | Allocations: 49542)
+  Rendered layout layouts/application.html.erb (Duration: 972.7ms | Allocations: 49644)
+Completed 200 OK in 975ms (Views: 952.6ms | ActiveRecord: 20.9ms | Allocations: 50123)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:09:02 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:74
+  Rendered layouts/_navbar.html.erb (Duration: 108.3ms | Allocations: 3626)
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 997.7ms | Allocations: 28356)
+  Rendered layout layouts/application.html.erb (Duration: 998.3ms | Allocations: 28453)
+Completed 200 OK in 1000ms (Views: 993.7ms | ActiveRecord: 5.3ms | Allocations: 28925)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:10:18 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 124.5ms | Allocations: 4512)
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 983.7ms | Allocations: 30381)
+  Rendered layout layouts/application.html.erb (Duration: 986.7ms | Allocations: 30757)
+Completed 200 OK in 993ms (Views: 986.6ms | ActiveRecord: 4.5ms | Allocations: 32204)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:10:19 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/more?post_id=414906&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:10:22 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"414906", "commit"=>"Read more"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1092.0ms | Allocations: 12784)
+  Rendered layout layouts/application.html.erb (Duration: 1092.7ms | Allocations: 12881)
+Completed 200 OK in 1105ms (Views: 1093.9ms | ActiveRecord: 2.4ms | Allocations: 14749)
+
+
+Started GET "/more?post_id=414906&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:11:18 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"414906", "commit"=>"Read more"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 573.1ms | Allocations: 12991)
+  Rendered layout layouts/application.html.erb (Duration: 575.1ms | Allocations: 13369)
+Completed 200 OK in 588ms (Views: 578.8ms | ActiveRecord: 1.7ms | Allocations: 16005)
+
+
+Started GET "/more?post_id=414906&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:12:04 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"414906", "commit"=>"Read more"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 469.1ms | Allocations: 12807)
+  Rendered layout layouts/application.html.erb (Duration: 471.0ms | Allocations: 13186)
+Completed 200 OK in 484ms (Views: 473.8ms | ActiveRecord: 2.0ms | Allocations: 16031)
+
+
+Started GET "/more?post_id=414906&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:12:23 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"414906", "commit"=>"Read more"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 502.2ms | Allocations: 12813)
+  Rendered layout layouts/application.html.erb (Duration: 504.0ms | Allocations: 13191)
+Completed 200 OK in 516ms (Views: 507.4ms | ActiveRecord: 1.5ms | Allocations: 16041)
+
+
+Started GET "/more?post_id=414906&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:12:31 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"414906", "commit"=>"Read more"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 482.6ms | Allocations: 10998)
+  Rendered layout layouts/application.html.erb (Duration: 484.0ms | Allocations: 11095)
+Completed 200 OK in 496ms (Views: 485.6ms | ActiveRecord: 1.8ms | Allocations: 13058)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:13:15 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 107.1ms | Allocations: 4116)
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 897.3ms | Allocations: 29956)
+  Rendered layout layouts/application.html.erb (Duration: 897.8ms | Allocations: 30053)
+Completed 200 OK in 903ms (Views: 894.1ms | ActiveRecord: 5.0ms | Allocations: 30655)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:13:18 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 148.4ms | Allocations: 3630)
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1035.8ms | Allocations: 28375)
+  Rendered layout layouts/application.html.erb (Duration: 1037.1ms | Allocations: 28472)
+Completed 200 OK in 1051ms (Views: 1035.9ms | ActiveRecord: 4.1ms | Allocations: 28944)
+
+
+Started GET "/more?post_id=414906&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:13:59 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"414906", "commit"=>"Read more"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 506.1ms | Allocations: 12771)
+  Rendered layout layouts/application.html.erb (Duration: 509.9ms | Allocations: 13150)
+Completed 200 OK in 522ms (Views: 512.8ms | ActiveRecord: 2.2ms | Allocations: 15787)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:14:01 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 118.7ms | Allocations: 4271)
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:84
+  Rendered posts/index.html.erb within layouts/application (Duration: 1152.3ms | Allocations: 30133)
+  Rendered layout layouts/application.html.erb (Duration: 1153.0ms | Allocations: 30230)
+Completed 200 OK in 1159ms (Views: 1150.0ms | ActiveRecord: 4.6ms | Allocations: 30886)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:14:09 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 127.3ms | Allocations: 3619)
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:84
+  Rendered posts/index.html.erb within layouts/application (Duration: 934.9ms | Allocations: 28356)
+  Rendered layout layouts/application.html.erb (Duration: 935.4ms | Allocations: 28453)
+Completed 200 OK in 937ms (Views: 931.4ms | ActiveRecord: 4.7ms | Allocations: 28924)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:14:10 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:16:49 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 124.9ms | Allocations: 4498)
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1332.9ms | Allocations: 42692)
+  Rendered layout layouts/application.html.erb (Duration: 1334.5ms | Allocations: 43069)
+Completed 200 OK in 1341ms (Views: 1333.2ms | ActiveRecord: 5.4ms | Allocations: 44508)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:16:51 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:21:23 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2230)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2305)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3725)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render "layouts/navbar" %>
+<div class="slider sliderv2">
+	<div class="container">
+		<div class="row">
+			<div class="slider-single-item">
+			<% responsed = Faraday.get('https://api.themoviedb.org/3/movie/popular?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+			<% popular = JSON.parse(responsed.body) %>
+				<!--START-->
+				<% a=0; %>																
+				<%=	while a < 5 do %>
+				<div class="movie-item">
+					<div class="row">
+						<div class="col-md-8 col-sm-12 col-xs-12">
+							<div class="title-in">
+								<div class="cate">
+									<!-- <span class="blue"><a href="#">Sci-fi</a></span>
+									<span class="yell"><a href="#">Action</a></span>
+									<span class="orange"><a href="#">advanture</a></span> -->
+								</div>
+								<h1><a href="#"><%= popular['results'][a]['original_title'] %><br>
+									 <span><%= popular['results'][a]['release_date'] %></span></a></h1>
+								<div class="social-btn">
+									<% responset = Faraday.get("https://api.themoviedb.org/3/movie/#{popular['results'][a]['id']}/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
+									<% trailer = JSON.parse(responset.body) %>
+									<% t=0; %>
+									<%= while trailer['results'][t]['type'] != 'Trailer' do %>
+									<% t=t+1 %>
+									<% end %>
+									<%= link_to "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "parent-btn" do %> <i class="ion-play"></i> Watch trailer <% end %>
+									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+									<div class="hover-bnt">
+										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+										<div class="hvr-item">
+											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="mv-details">
+									<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+									<ul class="mv-infor">
+										<li> original language: <%= popular['results'][a]['original_language'] %></li>
+										<li> Rated:  <%= popular['results'][a]['vote_average'] %> </li>
+										<li> Release: <%= popular['results'][a]['release_date'] %></li>
+									</ul>
+								</div>
+								<div class="btn-transform transform-vertical">
+									<div><a href="#" class="item item-1 redbtn">more detail</a></div>
+									<%= form_with url: "/more", method: :get do |form| %>
+										<%= form.hidden_field :post_id, :value => popular['results'][a]['id'] %>
+										<%= form.submit "Read more", class: "item item-2 redbtn hvrbtn" %>
+									  <% end %>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12 col-xs-12">
+							<div class="mv-img-2">
+								<a href="#"><%= image_tag("https://image.tmdb.org/t/p/original/#{popular['results'][a]['poster_path']}") %></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% a= a + 1; %>
+				<% end %>
+				<!--END-->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="topbar-filter fw">
+					<p>Found <span>20 movies</span> in total</p>
+				</div>
+				<h1 style= "color:white;"> UPCOMING MOVIES </h1>
+				<br />
+				<div class="flex-wrap-movielist mv-grid-fw">
+					<% @posts.each do |post| %>
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+							<div class="hvr-inner">
+								<%= link_to 'Read More' , post %><i class="ion-android-arrow-dropright"></i> </a>
+							</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">
+								<%= post.title %>
+									</a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+							</div>
+						</div>
+						<% end %>
+						<% response = Faraday.get('https://api.themoviedb.org/3/movie/upcoming?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+						<% data = JSON.parse(response.body) %>
+						<% i=0; %>																
+						<%=	while i < 20 do %>
+						<div class="movie-item-style-2 movie-item-style-1">
+						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
+						<div class="hvr-inner">
+							<%= form_with url: "/more", method: :get do |form| %>
+								<%= form.hidden_field :post_id, :value => data['results'][i]['id'] %>
+								<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
+							  <% end %>						  
+						</div>
+						<div class="mv-item-infor">
+							<h6><a href="#">
+										<%= data['results'][i]['original_title'] %>
+								</a></h6>
+							<p class="rate"><i class="ion-android-star"></i><span><%= data['results'][i]['vote_average'] %></span> /10</p>
+						</div>
+					</div>
+					<% i = i + 1; %>
+					<% end %>
+				</div>
+				<h1 style= "color:white;"> TOP RATED MOVIES </h1>
+				<br />
+				<% t=0; %>
+				<% while t < 20 %>
+				<div class="flex-wrap-movielist mv-grid-fw">
+					<% responset = Faraday.get('https://api.themoviedb.org/3/movie/top_rated?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+					<% top = JSON.parse(responset.body) %>
+					<% i=0; %>																
+					<%=	while i < 20 do %>
+					<div class="movie-item-style-2 movie-item-style-1">
+					<%= image_tag("https://image.tmdb.org/t/p/original/#{top['results'][i]['poster_path']}") %>
+					<div class="hvr-inner">
+						<%= form_with url: "/more", method: :get do |form| %>
+							<%= form.hidden_field :post_id, :value => top['results'][i]['id'] %>
+							<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
+						  <% end %>						  
+					</div>
+					<div class="mv-item-infor">
+						<h6><a href="#">
+									<%= top['results'][i]['original_title'] %>
+							</a></h6>
+						<p class="rate"><i class="ion-android-star"></i><span><%= top['results'][i]['vote_average'] %></span> /10</p>
+					</div>
+				</div>
+				<% t = t + 1; %>
+				<% end %>
+			</div>
+
+				<div class="topbar-filter">
+					<label>Movies per page: 40 </label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer section-->
+<footer style="background-image: url(http://bmk.clovery.si/dest/images/uploads/sliderv2-background.png) !important;"
+	class="ht-footer">
+	<div class="container">
+		<div class="flex-parent-ft">
+			<div class="flex-child-ft item1">
+				<a href="index.html"><img class="logo" src="images/logo1.png" alt=""></a>
+				<p>5th Avenue st, manhattan<br>
+					New York, NY 10001</p>
+				<p>Call us: <a href="#">(+01) 202 342 6789</a></p>
+			</div>
+			<div class="flex-child-ft item2">
+				<h4>Resources</h4>
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Blockbuster</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Forums</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Help Center</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item3">
+				<h4>Legal</h4>
+				<ul>
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Security</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item4">
+				<h4>Account</h4>
+				<ul>
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">Watchlist</a></li>
+					<li><a href="#">Collections</a></li>
+					<li><a href="#">User Guide</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item5">
+				<h4>Newsletter</h4>
+				<p>Subscribe to our newsletter system now <br> to get latest news from us.</p>
+				<form action="#">
+					<input type="text" placeholder="Enter your email...">
+				</form>
+				<a href="#" class="btn">Subscribe now <i class="ion-ios-arrow-forward"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="ft-copyright">
+		<div class="ft-left">
+			<p>© 2017 Blockbuster. All Rights Reserved. Designed by leehari.</p>
+		</div>
+		<div class="backtotop">
+			<p><a href="#" id="back-to-top">Back to top <i class="ion-ios-arrow-thin-up"></i></a></p>
+		</div>
+	</div>
+</footer>
+<!-- end of footer section-->
+):
+1:    <%= render "layouts/navbar" %>
+2:    <div class="slider sliderv2">
+3:    	<div class="container">
+4:    		<div class="row">
+5:    			<div class="slider-single-item">
+6:    			<% responsed = Faraday.get('https://api.themoviedb.org/3/movie/popular?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+7:    			<% popular = JSON.parse(responsed.body) %>
+8:    				<!--START-->
+9:    				<% a=0; %>																
+10:    				<%=	while a < 5 do %>
+11:    				<div class="movie-item">
+12:    					<div class="row">
+13:    						<div class="col-md-8 col-sm-12 col-xs-12">
+14:    							<div class="title-in">
+15:    								<div class="cate">
+16:    									<!-- <span class="blue"><a href="#">Sci-fi</a></span>
+17:    									<span class="yell"><a href="#">Action</a></span>
+18:    									<span class="orange"><a href="#">advanture</a></span> -->
+19:    								</div>
+20:    								<h1><a href="#"><%= popular['results'][a]['original_title'] %><br>
+21:    									 <span><%= popular['results'][a]['release_date'] %></span></a></h1>
+22:    								<div class="social-btn">
+23:    									<% responset = Faraday.get("https://api.themoviedb.org/3/movie/#{popular['results'][a]['id']}/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
+24:    									<% trailer = JSON.parse(responset.body) %>
+25:    									<% t=0; %>
+26:    									<%= while trailer['results'][t]['type'] != 'Trailer' do %>
+27:    									<% t=t+1 %>
+28:    									<% end %>
+29:    									<%= link_to "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "parent-btn" do %> <i class="ion-play"></i> Watch trailer <% end %>
+30:    									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+31:    									<div class="hover-bnt">
+32:    										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+33:    										<div class="hvr-item">
+34:    											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+35:    											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+36:    											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+37:    											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+38:    										</div>
+39:    									</div>
+40:    								</div>
+41:    								<div class="mv-details">
+42:    									<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+43:    									<ul class="mv-infor">
+44:    										<li> original language: <%= popular['results'][a]['original_language'] %></li>
+45:    										<li> Rated:  <%= popular['results'][a]['vote_average'] %> </li>
+46:    										<li> Release: <%= popular['results'][a]['release_date'] %></li>
+47:    									</ul>
+48:    								</div>
+49:    								<div class="btn-transform transform-vertical">
+50:    									<div><a href="#" class="item item-1 redbtn">more detail</a></div>
+51:    									<%= form_with url: "/more", method: :get do |form| %>
+52:    										<%= form.hidden_field :post_id, :value => popular['results'][a]['id'] %>
+53:    										<%= form.submit "Read more", class: "item item-2 redbtn hvrbtn" %>
+54:    									  <% end %>
+55:    								</div>
+56:    
+57:    							</div>
+58:    						</div>
+59:    						<div class="col-md-4 col-sm-12 col-xs-12">
+60:    							<div class="mv-img-2">
+61:    								<a href="#"><%= image_tag("https://image.tmdb.org/t/p/original/#{popular['results'][a]['poster_path']}") %></a>
+62:    							</div>
+63:    						</div>
+64:    					</div>
+65:    				</div>
+66:    				<% a= a + 1; %>
+67:    				<% end %>
+68:    				<!--END-->
+69:    			</div>
+70:    		</div>
+71:    	</div>
+72:    </div>
+73:    <div class="page-single">
+74:    	<div class="container">
+75:    		<div class="row">
+76:    			<div class="col-md-12 col-sm-12 col-xs-12">
+77:    				<div class="topbar-filter fw">
+78:    					<p>Found <span>20 movies</span> in total</p>
+79:    				</div>
+80:    				<h1 style= "color:white;"> UPCOMING MOVIES </h1>
+81:    				<br />
+82:    				<div class="flex-wrap-movielist mv-grid-fw">
+83:    					<% @posts.each do |post| %>
+84:    						<div class="movie-item-style-2 movie-item-style-1">
+85:    							<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
+86:    							<div class="hvr-inner">
+87:    								<%= link_to 'Read More' , post %><i class="ion-android-arrow-dropright"></i> </a>
+88:    							</div>
+89:    							<div class="mv-item-infor">
+90:    								<h6><a href="#">
+91:    								<%= post.title %>
+92:    									</a></h6>
+93:    								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
+94:    							</div>
+95:    						</div>
+96:    						<% end %>
+97:    						<% response = Faraday.get('https://api.themoviedb.org/3/movie/upcoming?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+98:    						<% data = JSON.parse(response.body) %>
+99:    						<% i=0; %>																
+100:    						<%=	while i < 20 do %>
+101:    						<div class="movie-item-style-2 movie-item-style-1">
+102:    						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
+103:    						<div class="hvr-inner">
+104:    							<%= form_with url: "/more", method: :get do |form| %>
+105:    								<%= form.hidden_field :post_id, :value => data['results'][i]['id'] %>
+106:    								<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
+107:    							  <% end %>						  
+108:    						</div>
+109:    						<div class="mv-item-infor">
+110:    							<h6><a href="#">
+111:    										<%= data['results'][i]['original_title'] %>
+112:    								</a></h6>
+113:    							<p class="rate"><i class="ion-android-star"></i><span><%= data['results'][i]['vote_average'] %></span> /10</p>
+114:    						</div>
+115:    					</div>
+116:    					<% i = i + 1; %>
+117:    					<% end %>
+118:    				</div>
+119:    				<h1 style= "color:white;"> TOP RATED MOVIES </h1>
+120:    				<br />
+121:    				<% t=0; %>
+122:    				<% while t < 20 %>
+123:    				<div class="flex-wrap-movielist mv-grid-fw">
+124:    					<% responset = Faraday.get('https://api.themoviedb.org/3/movie/top_rated?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
+125:    					<% top = JSON.parse(responset.body) %>
+126:    					<% i=0; %>																
+127:    					<%=	while i < 20 do %>
+128:    					<div class="movie-item-style-2 movie-item-style-1">
+129:    					<%= image_tag("https://image.tmdb.org/t/p/original/#{top['results'][i]['poster_path']}") %>
+130:    					<div class="hvr-inner">
+131:    						<%= form_with url: "/more", method: :get do |form| %>
+132:    							<%= form.hidden_field :post_id, :value => top['results'][i]['id'] %>
+133:    							<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
+134:    						  <% end %>						  
+135:    					</div>
+136:    					<div class="mv-item-infor">
+137:    						<h6><a href="#">
+138:    									<%= top['results'][i]['original_title'] %>
+139:    							</a></h6>
+140:    						<p class="rate"><i class="ion-android-star"></i><span><%= top['results'][i]['vote_average'] %></span> /10</p>
+141:    					</div>
+142:    				</div>
+143:    				<% t = t + 1; %>
+144:    				<% end %>
+145:    			</div>
+146:    
+147:    				<div class="topbar-filter">
+148:    					<label>Movies per page: 40 </label>
+149:    				</div>
+150:    			</div>
+151:    		</div>
+152:    	</div>
+153:    </div>
+154:    <!-- footer section-->
+155:    <footer style="background-image: url(http://bmk.clovery.si/dest/images/uploads/sliderv2-background.png) !important;"
+156:    	class="ht-footer">
+157:    	<div class="container">
+158:    		<div class="flex-parent-ft">
+159:    			<div class="flex-child-ft item1">
+160:    				<a href="index.html"><img class="logo" src="images/logo1.png" alt=""></a>
+161:    				<p>5th Avenue st, manhattan<br>
+162:    					New York, NY 10001</p>
+163:    				<p>Call us: <a href="#">(+01) 202 342 6789</a></p>
+164:    			</div>
+165:    			<div class="flex-child-ft item2">
+166:    				<h4>Resources</h4>
+167:    				<ul>
+168:    					<li><a href="#">About</a></li>
+169:    					<li><a href="#">Blockbuster</a></li>
+170:    					<li><a href="#">Contact Us</a></li>
+171:    					<li><a href="#">Forums</a></li>
+172:    					<li><a href="#">Blog</a></li>
+173:    					<li><a href="#">Help Center</a></li>
+174:    				</ul>
+175:    			</div>
+176:    			<div class="flex-child-ft item3">
+177:    				<h4>Legal</h4>
+178:    				<ul>
+179:    					<li><a href="#">Terms of Use</a></li>
+180:    					<li><a href="#">Privacy Policy</a></li>
+181:    					<li><a href="#">Security</a></li>
+182:    				</ul>
+183:    			</div>
+184:    			<div class="flex-child-ft item4">
+185:    				<h4>Account</h4>
+186:    				<ul>
+187:    					<li><a href="#">My Account</a></li>
+188:    					<li><a href="#">Watchlist</a></li>
+189:    					<li><a href="#">Collections</a></li>
+190:    					<li><a href="#">User Guide</a></li>
+191:    				</ul>
+192:    			</div>
+193:    			<div class="flex-child-ft item5">
+194:    				<h4>Newsletter</h4>
+195:    				<p>Subscribe to our newsletter system now <br> to get latest news from us.</p>
+196:    				<form action="#">
+197:    					<input type="text" placeholder="Enter your email...">
+198:    				</form>
+199:    				<a href="#" class="btn">Subscribe now <i class="ion-ios-arrow-forward"></i></a>
+200:    			</div>
+201:    		</div>
+202:    	</div>
+203:    	<div class="ft-copyright">
+204:    		<div class="ft-left">
+205:    			<p>© 2017 Blockbuster. All Rights Reserved. Designed by leehari.</p>
+206:    		</div>
+207:    		<div class="backtotop">
+208:    			<p><a href="#" id="back-to-top">Back to top <i class="ion-ios-arrow-thin-up"></i></a></p>
+209:    		</div>
+210:    	</div>
+211:    </footer>
+212:    <!-- end of footer section-->
+  
+app/views/posts/index.html.erb:214: syntax error, unexpected end-of-input, expecting `end'
+app/views/posts/index.html.erb:214: syntax error, unexpected end-of-input, expecting `end'
+app/views/posts/index.html.erb:214: syntax error, unexpected end-of-input, expecting `end'
+app/views/posts/index.html.erb:214: syntax error, unexpected end-of-input, expecting `end'
+app/views/posts/index.html.erb:214: syntax error, unexpected end-of-input, expecting `end'
+app/views/posts/index.html.erb:214: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:22:20 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 178.8ms | Allocations: 8417)
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1301.5ms | Allocations: 37345)
+  Rendered layout layouts/application.html.erb (Duration: 1301.9ms | Allocations: 37419)
+Completed 500 Internal Server Error in 1306ms (ActiveRecord: 26.4ms | Allocations: 38878)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    124: 					<% t=0; %>
+    125: 					<% while t < 20 %>
+    126: 					<div class="movie-item-style-2 movie-item-style-1">
+    127: 					<%= image_tag("https://image.tmdb.org/t/p/original/#{top['results'][i]['poster_path']}") %>
+    128: 					<div class="hvr-inner">
+    129: 						<%= form_with url: "/more", method: :get do |form| %>
+    130: 							<%= form.hidden_field :post_id, :value => top['results'][i]['id'] %>
+  
+app/views/posts/index.html.erb:127
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:23:31 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 254.7ms | Allocations: 4383)
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1712.3ms | Allocations: 33238)
+  Rendered layout layouts/application.html.erb (Duration: 1712.6ms | Allocations: 33312)
+Completed 500 Internal Server Error in 1717ms (ActiveRecord: 4.2ms | Allocations: 34759)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    124: 					<% t=0; %>
+    125: 					<% while t <= 19 %>
+    126: 					<div class="movie-item-style-2 movie-item-style-1">
+    127: 					<%= image_tag("https://image.tmdb.org/t/p/original/#{top['results'][i]['poster_path']}") %>
+    128: 					<div class="hvr-inner">
+    129: 						<%= form_with url: "/more", method: :get do |form| %>
+    130: 							<%= form.hidden_field :post_id, :value => top['results'][i]['id'] %>
+  
+app/views/posts/index.html.erb:127
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:24:05 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 152.6ms | Allocations: 4381)
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1221.9ms | Allocations: 42523)
+  Rendered layout layouts/application.html.erb (Duration: 1224.1ms | Allocations: 42903)
+Completed 200 OK in 1230ms (Views: 1222.3ms | ActiveRecord: 5.5ms | Allocations: 44397)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:24:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/more?post_id=671043&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:24:16 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"671043", "commit"=>"Read more"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1470.7ms | Allocations: 8338)
+  Rendered layout layouts/application.html.erb (Duration: 1471.4ms | Allocations: 8435)
+Completed 200 OK in 1480ms (Views: 1472.4ms | ActiveRecord: 1.4ms | Allocations: 10305)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:24:25 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 110.9ms | Allocations: 3622)
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1191.1ms | Allocations: 40360)
+  Rendered layout layouts/application.html.erb (Duration: 1192.0ms | Allocations: 40457)
+Completed 200 OK in 1196ms (Views: 1188.8ms | ActiveRecord: 4.8ms | Allocations: 40930)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:24:26 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/more?post_id=155&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:24:30 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"155", "commit"=>"Read more"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1533.0ms | Allocations: 11153)
+  Rendered layout layouts/application.html.erb (Duration: 1533.7ms | Allocations: 11250)
+Completed 200 OK in 1542ms (Views: 1534.7ms | ActiveRecord: 1.1ms | Allocations: 13001)
+
+
+Started GET "/more?post_id=155&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:24:41 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"155", "commit"=>"Read more"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 652.3ms | Allocations: 11252)
+  Rendered layout layouts/application.html.erb (Duration: 654.1ms | Allocations: 11349)
+Completed 200 OK in 664ms (Views: 655.5ms | ActiveRecord: 1.2ms | Allocations: 13097)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:24:59 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 106.1ms | Allocations: 3622)
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1013.8ms | Allocations: 40378)
+  Rendered layout layouts/application.html.erb (Duration: 1014.3ms | Allocations: 40475)
+Completed 200 OK in 1017ms (Views: 1010.7ms | ActiveRecord: 4.8ms | Allocations: 40947)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:25:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/more?post_id=129&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:25:25 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"129", "commit"=>"Read more"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1322.4ms | Allocations: 8891)
+  Rendered layout layouts/application.html.erb (Duration: 1324.4ms | Allocations: 8988)
+Completed 200 OK in 1335ms (Views: 1326.0ms | ActiveRecord: 1.6ms | Allocations: 10737)
+
+
+Started GET "/more?post_id=129&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:25:34 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"129", "commit"=>"Read more"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1149.7ms | Allocations: 9006)
+  Rendered layout layouts/application.html.erb (Duration: 1150.4ms | Allocations: 9103)
+Completed 200 OK in 1158ms (Views: 1151.2ms | ActiveRecord: 1.3ms | Allocations: 10852)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:25:41 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 127.4ms | Allocations: 3624)
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1023.1ms | Allocations: 40382)
+  Rendered layout layouts/application.html.erb (Duration: 1023.7ms | Allocations: 40479)
+Completed 200 OK in 1027ms (Views: 1021.5ms | ActiveRecord: 3.9ms | Allocations: 40951)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:25:42 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/more?post_id=19404&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:25:58 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"19404", "commit"=>"Read more"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1345.4ms | Allocations: 7422)
+  Rendered layout layouts/application.html.erb (Duration: 1348.3ms | Allocations: 7519)
+Completed 200 OK in 1360ms (Views: 1350.6ms | ActiveRecord: 2.2ms | Allocations: 9268)
+
+
+Started GET "/more?post_id=19404&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:26:06 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"19404", "commit"=>"Read more"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 596.0ms | Allocations: 7483)
+  Rendered layout layouts/application.html.erb (Duration: 597.0ms | Allocations: 7580)
+Completed 200 OK in 609ms (Views: 598.6ms | ActiveRecord: 1.4ms | Allocations: 9330)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:26:16 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 112.2ms | Allocations: 3619)
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1107.3ms | Allocations: 40346)
+  Rendered layout layouts/application.html.erb (Duration: 1107.7ms | Allocations: 40443)
+Completed 200 OK in 1111ms (Views: 1104.0ms | ActiveRecord: 4.8ms | Allocations: 40915)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:26:18 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:26:48 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 138.6ms | Allocations: 4502)
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1090.1ms | Allocations: 42651)
+  Rendered layout layouts/application.html.erb (Duration: 1091.9ms | Allocations: 43028)
+Completed 200 OK in 1100ms (Views: 1091.9ms | ActiveRecord: 5.5ms | Allocations: 44467)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:26:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:27:09 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 119.3ms | Allocations: 4504)
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1049.3ms | Allocations: 42642)
+  Rendered layout layouts/application.html.erb (Duration: 1050.7ms | Allocations: 43019)
+Completed 200 OK in 1068ms (Views: 1059.8ms | ActiveRecord: 5.2ms | Allocations: 44475)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:27:10 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:28:32 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 523.2ms | Allocations: 4529)
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1556.8ms | Allocations: 42634)
+  Rendered layout layouts/application.html.erb (Duration: 1558.2ms | Allocations: 43016)
+Completed 200 OK in 1566ms (Views: 1558.1ms | ActiveRecord: 4.7ms | Allocations: 44473)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:28:34 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/more?post_id=667257&commit=Read+more" for 127.0.0.1 at 2022-05-01 14:28:50 +0200
+Processing by PostsController#more as HTML
+  Parameters: {"post_id"=>"667257", "commit"=>"Read more"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/more.html.erb within layouts/application
+  Rendered posts/more.html.erb within layouts/application (Duration: 1500.3ms | Allocations: 8341)
+  Rendered layout layouts/application.html.erb (Duration: 1509.1ms | Allocations: 8438)
+Completed 200 OK in 1520ms (Views: 1510.7ms | ActiveRecord: 2.5ms | Allocations: 10306)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:28:59 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 100.9ms | Allocations: 3622)
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 998.6ms | Allocations: 40366)
+  Rendered layout layouts/application.html.erb (Duration: 999.1ms | Allocations: 40463)
+Completed 200 OK in 1001ms (Views: 995.7ms | ActiveRecord: 4.2ms | Allocations: 40936)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:29:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:34:51 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 176.5ms | Allocations: 8410)
+  [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1420.6ms | Allocations: 58866)
+  Rendered layout layouts/application.html.erb (Duration: 1421.9ms | Allocations: 59244)
+Completed 200 OK in 1427ms (Views: 1425.6ms | ActiveRecord: 25.8ms | Allocations: 60680)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:34:53 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:35:33 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 110.1ms | Allocations: 4502)
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1387.4ms | Allocations: 55000)
+  Rendered layout layouts/application.html.erb (Duration: 1389.7ms | Allocations: 55380)
+Completed 200 OK in 1399ms (Views: 1392.4ms | ActiveRecord: 4.3ms | Allocations: 56837)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:35:34 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:36:11 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 516.3ms | Allocations: 4501)
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:83
+  Rendered posts/index.html.erb within layouts/application (Duration: 1543.3ms | Allocations: 54973)
+  Rendered layout layouts/application.html.erb (Duration: 1544.6ms | Allocations: 55355)
+Completed 200 OK in 1550ms (Views: 1544.3ms | ActiveRecord: 3.6ms | Allocations: 56812)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:36:12 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:36:52 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 111.0ms | Allocations: 4500)
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:84
+  Rendered posts/index.html.erb within layouts/application (Duration: 1102.8ms | Allocations: 54955)
+  Rendered layout layouts/application.html.erb (Duration: 1104.0ms | Allocations: 55337)
+Completed 200 OK in 1110ms (Views: 1102.6ms | ActiveRecord: 4.7ms | Allocations: 56794)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:36:54 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-01 14:37:59 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:68
+  Rendered layouts/_navbar.html.erb (Duration: 148.6ms | Allocations: 4502)
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:84
+  Rendered posts/index.html.erb within layouts/application (Duration: 1208.8ms | Allocations: 54932)
+  Rendered layout layouts/application.html.erb (Duration: 1210.3ms | Allocations: 55310)
+Completed 200 OK in 1216ms (Views: 1208.5ms | ActiveRecord: 4.2ms | Allocations: 56767)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-01 14:38:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  
