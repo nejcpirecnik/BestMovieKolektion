@@ -67,6 +67,7 @@
 						<div class="tabs">
 							<ul class="tab-links tabs-mv">
 								<li class="active"><a href="#overview">Overview</a></li>
+								<li><a href="#reviews"> Reviews</a></li>
 								<li><a href="#cast">  Cast & Crew </a></li>
 								<li><a href="#media"> Media</a></li> 
 								<li><a href="#moviesrelated"> Related Movies</a></li>                        
@@ -490,7 +491,7 @@
 										<%= image_tag("https://image.tmdb.org/t/p/original/#{related['results'][r]['poster_path']}", style: "width:251px; height:170px;") %>
 										<div class="mv-item-infor">
 												<h6><a href="#"><%= related['results'][r]['title'] %> <span>(<%= related['results'][r]['release_date'] %>)</span></a></h6>
-												<p class="rate"><i class="ion-android-star"></i><span><%= related['results'][r]['vote_average'].to_i %></span> /10</p>
+												<p class="rate"><i class="ion-android-star"></i><span><%= related['results'][r]['vote_average'] %></span> /10</p>
 												<p class="describe"><%= related['results'][r]['overview']%></p>
 											</div>
 										</div>

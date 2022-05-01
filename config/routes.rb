@@ -11,4 +11,10 @@ Rails.application.routes.draw do
 
   get 'genres', to: 'posts#genres'
 
+  get 'news', to: 'posts#news'
+
+  get 'celebrities', to: 'posts#celebrities'
+
+
+
 end
