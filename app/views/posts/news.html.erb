@@ -1,1 +1,36 @@
-<h1 style = "color:black;"> Tu bojo news oziroma nekaj... karkoli </h1>
+
+
+<%= form_with url: "/news", method: :get do |form| %>
+    <%= form.label :query, "Search for:" %>
+    <%= form.text_field :query %>
+    <%= form.submit "Search", id:"search" %>
+  <% end %>
+
+  <% if params[:commit] == "Search" %>
+  <div id="moviesrelated" class="tab">
+  <% responses = Faraday.get("https://api.themoviedb.org/3/search/movie?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&query=#{params[:query]}&page=1&include_adult=false") %>
+  <% search = JSON.parse(responses.body) %>
+  <% if search['results'] == [] %>
+  <br />
+    <h1 style = "color:black;"> nc nebo </h1>
+  <% else %>
+  <% s = 0; %>
+  <% while s <= 19 do%>
+  <div class="movie-item-style-2">
+  <% if search['results'][s]['poster_path'] == [] %>
+    <p> nema posterja </p>
+  <% else %>
+    <%= image_tag("https://image.tmdb.org/t/p/original/#{search['results'][s]['poster_path']}", style: "width:251px; height:170px;") %>
+  <% end %>
+  <div class="mv-item-infor">
+          <h6><%= link_to search['results'][s]['original_title'] %> <span>(<%= search['results'][s]['release_date'] %>)</span></h6>
+          <p class="rate"><i class="ion-android-star"></i><span><%= search['results'][s]['vote_average'] %></span> /10</p>
+          <p class="describe"><%= search['results'][s]['overview']%></p>
+      </div>
+  </div>
+  <% s=s+1; %>
+  <% end %>
+  </div>
+  <% end %>
+  <% end %>
+  
