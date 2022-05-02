@@ -60952,3 +60952,43 @@ Processing by PostsController#news as HTML
 Completed 200 OK in 139ms (Views: 130.7ms | ActiveRecord: 1.4ms | Allocations: 6479)
 
 
+Started GET "/news?query=krneki&commit=Search" for 127.0.0.1 at 2022-05-02 15:10:52 +0200
+Processing by PostsController#news as HTML
+  Parameters: {"query"=>"krneki", "commit"=>"Search"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/news.html.erb within layouts/application
+  Rendered posts/news.html.erb within layouts/application (Duration: 256.0ms | Allocations: 2948)
+  Rendered layout layouts/application.html.erb (Duration: 257.6ms | Allocations: 3326)
+Completed 200 OK in 290ms (Views: 259.3ms | ActiveRecord: 18.0ms | Allocations: 9363)
+
+
+Started GET "/news?query=Batman&commit=Search" for 127.0.0.1 at 2022-05-02 15:10:53 +0200
+Processing by PostsController#news as HTML
+  Parameters: {"query"=>"Batman", "commit"=>"Search"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering posts/news.html.erb within layouts/application
+  Rendered posts/news.html.erb within layouts/application (Duration: 249.3ms | Allocations: 4426)
+  Rendered layout layouts/application.html.erb (Duration: 250.0ms | Allocations: 4523)
+Completed 200 OK in 260ms (Views: 251.5ms | ActiveRecord: 2.2ms | Allocations: 6484)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-02 15:10:57 +0200
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:64
+  Rendered layouts/_navbar.html.erb (Duration: 122.6ms | Allocations: 4233)
+  [1m[36mPost Load (3.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:86
+  Rendered posts/index.html.erb within layouts/application (Duration: 1178.7ms | Allocations: 54781)
+  Rendered layout layouts/application.html.erb (Duration: 1179.4ms | Allocations: 54878)
+Completed 200 OK in 1183ms (Views: 1174.9ms | ActiveRecord: 5.4ms | Allocations: 55479)
+
+
+Started GET "/images/logo1.png" for 127.0.0.1 at 2022-05-02 15:10:59 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/logo1.png"):
+  

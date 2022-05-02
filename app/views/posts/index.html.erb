@@ -5,6 +5,7 @@
 			<div class="slider-single-item">
 			<% responsed = Faraday.get('https://api.themoviedb.org/3/movie/popular?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
 			<% popular = JSON.parse(responsed.body) %>
+			<% if popular['results'] != [] %>
 				<!--START-->
 				<% a=0; %>																
 				<%=	while a < 5 do %>
@@ -64,6 +65,7 @@
 					</div>
 				</div>
 				<% a= a + 1; %>
+				<% end %>
 				<% end %>
 				<!--END-->
 			</div>
