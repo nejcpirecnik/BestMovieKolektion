@@ -115,7 +115,7 @@
 						            		<div class="sb-it">
 						            			<h6>Director: </h6>
                                                 <% cr = 0; %>
-                                                <% while cast['crew'][cr]['known_for_department'] != 'Directing' %>
+                                                <% while cast['crew'][cr]['department'] != 'Directing' %>
                                                     <% cr=cr+1; %>
                                                 <% end %>
 						            			<p><a href="#"><%= cast['crew'][cr]['name'] %></a></p>
@@ -145,20 +145,10 @@
 						            			<p><%= data['runtime'] %> min</p>
 						            		</div>
 						            		<div class="sb-it">
-						            			<h6>Plot Keywords:</h6>
+						            		<h6>Plot Keywords:</h6>
 						            			<p class="tags">
 												<% responsek = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/keywords?api_key=e766900bdc5dd5e8399627d7ec66594f") %>
 												<% keywords = JSON.parse(responsek.body) %>
-												<% if keywords['keywords'] != [] %>
-													<% k=0; %>
-													<% while k < 1 || k < 3 do %>
-														<span class="time"><a href="#"><%= keywords['keywords'][k]['name'] %></a></span>
-														<% k=k+1; %>
-													<% end %>
-													<% else %>
-													<span class="time">Keywords for this movie are nonexistent </a></span>
-													<% end %>
-						            			</p>
 						            		</div>
 
 						            	</div>
