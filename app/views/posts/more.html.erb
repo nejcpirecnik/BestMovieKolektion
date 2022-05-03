@@ -98,8 +98,9 @@
                                             </div>											
                                             <% responsec = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/credits?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
                                             <% cast = JSON.parse(responsec.body) %>
+											<% if cast['cast'] != [] %>
                                             <% c = 0; %>
-                                            <% while c < 5 %>
+                                            <% while c < 2 %>
                                             <% c=c+1; %>
                                             <div class="cast-it">
                                                 <div class="cast-left">
@@ -109,24 +110,31 @@
                                                 <p> <%= cast['cast'][c]['character'] %>.</p>
                                             </div>
                                             <% end %>
+											<% end %>
 											</div>
 						            	</div>
 						            	<div class="col-md-4 col-xs-12 col-sm-12">
 						            		<div class="sb-it">
-						            			<h6>Director: </h6>
+						            			<h6>Cast: </h6>
+												<% if cast['cast'] != [] %>
                                                 <% cr = 0; %>
-                                                <% while cast['crew'][cr]['department'] != 'Directing' %>
+                                                <% while cr < 2 %>
+												<p><%= cast['cast'][cr]['name'] %></p>
+												<p><%= cast['cast'][cr]['department'] %></p>
                                                     <% cr=cr+1; %>
                                                 <% end %>
-						            			<p><a href="#"><%= cast['crew'][cr]['name'] %></a></p>
+												<% end %>
 						            		</div>
 						            		<div class="sb-it">
-						            			<h6>Writer: </h6>
-                                                <% w = 0; %>
-                                                <% while cast['crew'][w]['department'] != 'Writing' %>
+						            			<h6>Crew: </h6>
+												<% if cast['crew'] != [] %>
+												<% w = 0; %>
+                                                <% while w < 2 %>
+													<p><a href="#"><%= cast['crew'][w]['name'] %></a></p>
+													<p><a href="#"><%= cast['crew'][w]['department'] %></a></p>
                                                     <% w=w+1; %>
                                                 <% end %>
-						            			<p><a href="#"><%= cast['crew'][w]['name'] %></a></p>
+												<% end %>
 						            		</div>
 						            		<div class="sb-it">
 						            			<h6>Stars: </h6>
@@ -478,9 +486,9 @@
 										<% r = 0; %>
 										<% while r < 6 do%>
 										<div class="movie-item-style-2">
-										<%= image_tag("https://image.tmdb.org/t/p/original/#{related['results'][r]['poster_path']}", style: "width:251px; height:170px;") %>
+										<%= image_tag("https://image.tmdb.org/t/p/original/#{related['results'][r]['poster_path']}", style: "max-width:170px; min-width:170px; min-height:250px; max-height:250px; ") %>
 										<div class="mv-item-infor">
-												<h6><a href="#"><%= related['results'][r]['title'] %> <span>(<%= related['results'][r]['release_date'] %>)</span></a></h6>
+												<h6 style = "color:lightgrey;"><%= related['results'][r]['title'] %> <span>(<%= related['results'][r]['release_date'] %>)</span></h6>
 												<p class="rate"><i class="ion-android-star"></i><span><%= related['results'][r]['vote_average'] %></span> /10</p>
 												<p class="describe"><%= related['results'][r]['overview']%></p>
 											</div>
