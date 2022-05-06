@@ -9,18 +9,6 @@
 				<div class="movie-img sticky-sb">
                     <%= image_tag("https://image.tmdb.org/t/p/original/#{data['poster_path']}") %>
                 <div class="movie-btn">	
-                <% responset = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
-									<% trailer = JSON.parse(responset.body) %>
-									<% if trailer['results'] != [] %>
-									<% t=0; %>
-									<%= while trailer['results'][t]['type'] != 'Trailer' do %>
-									<% t=t+1 %>
-									<% end %>
-						<div class="btn-transform transform-vertical red">
-							<div> <%= link_to "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "item item-1 redbtn" do %> <i class="ion-play"></i> Watch trailer<% end %></div>
-                            <div> <%= link_to "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "item item-2 redbtn" do %><i class="ion-play"></i><% end %></div>
-						</div>
-						<% end %>
 						<div class="btn-transform transform-vertical">
 							<div><a href="#" class="item item-1 yellowbtn"> <i class="ion-card"></i> Buy ticket</a></div>
 							<div><a href="#" class="item item-2 yellowbtn"><i class="ion-card"></i></a></div>
@@ -81,15 +69,15 @@
 												<h4>Videos & Photos</h4>
 												<a href="#" class="time">All 5 Videos & 245 Photos <i class="ion-ios-arrow-right"></i></a>
 											</div>
-											<div class="mvsingle-item ov-item">
-												<a class="img-lightbox"  data-fancybox-group="gallery" href="http://bmk.clovery.si/dest/images/uploads/image11.jpg" ><img src="http://bmk.clovery.si/dest/images/uploads/image1.jpg" alt=""></a>
-												<a class="img-lightbox"  data-fancybox-group="gallery" href="http://bmk.clovery.si/dest/images/uploads/image21.jpg" ><img src="http://bmk.clovery.si/dest/images/uploads/image2.jpg" alt=""></a>
-												<a class="img-lightbox"  data-fancybox-group="gallery" href="http://bmk.clovery.si/dest/images/uploads/image31.jpg" ><img src="http://bmk.clovery.si/dest/images/uploads/image3.jpg" alt=""></a>
-												<div class="vd-it">
-													<img class="vd-img" src="http://bmk.clovery.si/dest/images/uploads/image4.jpg" alt="">
-													<a class="fancybox-media hvr-grow" href="https://www.youtube.com/embed/o-0hcF97wy0"><img src="http://bmk.clovery.si/dest/images/uploads/play-vd.png" alt=""></a>
-												</div>
-											</div>
+											<% responset = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/videos?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US") %>
+											<% trailer = JSON.parse(responset.body) %>
+											<% if trailer['results'] != [] %>
+											<% t=0; %>
+											<%= while trailer['results'][t]['type'] != 'Trailer' do %>
+											<% t=t+1 %>
+											<% end %>
+											<%= content_tag(:iframe, '', src: "http://www.youtube.com/embed/#{trailer['results'][t]['key']}", style: "width: 500px; height: 315px;" ) %>
+											<% end %>
 											<!-- movie cast -->
 											<div class="mvcast-item">
                                             <div class="title-hd-sm">
