@@ -45,8 +45,6 @@ Rails.application.configure do
     password: ENV["GMAIL_PASSWORD"]
   }
 
-
-
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => 'bestmoviekolektion.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
