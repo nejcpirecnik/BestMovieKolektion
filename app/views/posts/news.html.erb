@@ -53,7 +53,10 @@
                   <h1 style = "color:black;"> nc nebo </h1>
                 <% else %>
                 <% s = 0; %>
-                <% while s <= 19 do%>
+                <% if search['total_results'] < 5 %>
+                    <p style="color:white;"> premalo rezultatov </p>
+                <% else %>
+                <% while s <= 5 do %>
                 <div class="movie-item-style-2">
                   <% if search['results'][s]['poster_path'] == [] %>
                     <p> nema posterja </p>
@@ -68,6 +71,7 @@
                 </div>
                 <!--LOOP END HERE-->
                 <% s=s+1; %>
+                <% end %>
                 <% end %>
                 <% end %>
             </div>

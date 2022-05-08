@@ -182,8 +182,9 @@
 	</div>
 </div>
 
-<%= content_tag(:iframe, '', src: "https://bmkphp.clovery.si/", style: "position:relative; width:100%; height:100%; border:none; margin:0; padding:0;" , width: 560, height: 315, frameborder: 0) %>
-
+<% if user_signed_in? %>
+	<%= content_tag(:iframe, '', src: "https://bmkphp.clovery.si/", style: "position:relative; width:100%; height:100%; border:none; margin:0; padding:0;" , width: 560, height: 315, frameborder: 0) %>
+<% end %>
 <!-- footer section-->
 <footer style="background-image: url(http://bmk.clovery.si/dest/images/uploads/sliderv2-background.png) !important;"
 	class="ht-footer">
