@@ -29,15 +29,7 @@
 									<% t=t+1 %>
 									<% end %>
 									<%= link_to "https://www.youtube.com/watch?v=#{trailer['results'][t]['key']}",class: "parent-btn" do %> <i class="ion-play"></i> Watch trailer <% end %>
-									<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
 									<div class="hover-bnt">
-										<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
-										<div class="hvr-item">
-											<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
-											<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
-											<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
-											<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
-										</div>
 									</div>
 								</div>
 								<div class="mv-details">
@@ -52,7 +44,7 @@
 									<div><a href="#" class="item item-1 redbtn">more detail</a></div>
 									<%= form_with url: "/more", method: :get do |form| %>
 										<%= form.hidden_field :post_id, :value => popular['results'][a]['id'] %>
-										<%= form.submit "Read more", class: "item item-2 redbtn hvrbtn" %>
+										<%= form.submit "Read more", class: "item item-2 redbtn hvrbtn", style: "color: white; background-color: #dd003f; " %>
 									  <% end %>
 								</div>
 
@@ -88,20 +80,6 @@
 				<br />
 				<br />
 				<div class="flex-wrap-movielist mv-grid-fw">
-					<% @posts.each do |post| %>
-						<div class="movie-item-style-2 movie-item-style-1">
-							<img src="http://bmk.clovery.si/dest/images/uploads/thumbnail.png" alt="">
-							<div class="hvr-inner">
-								<%= link_to 'Read More' , post %><i class="ion-android-arrow-dropright"></i> </a>
-							</div>
-							<div class="mv-item-infor">
-								<h6><a href="#">
-								<%= post.title %>
-									</a></h6>
-								<p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
-							</div>
-						</div>
-						<% end %>
 						<% response = Faraday.get('https://api.themoviedb.org/3/movie/upcoming?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1') %>
 						<% data = JSON.parse(response.body) %>
 						<% i=0; %>																
@@ -109,10 +87,7 @@
 						<div class="movie-item-style-2 movie-item-style-1">
 						<%= image_tag("https://image.tmdb.org/t/p/original/#{data['results'][i]['poster_path']}") %>
 						<div class="hvr-inner">
-							<%= form_with url: "/more", method: :get do |form| %>
-								<%= form.hidden_field :post_id, :value => data['results'][i]['id'] %>
-								<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
-							  <% end %>						  
+								<%= link_to "read more", more_url(:post_id => data['results'][i]['id']) %>						  					  				  
 						</div>
 						<div class="mv-item-infor">
 							<h6><a href="#">
@@ -135,10 +110,7 @@
 					<div class="movie-item-style-2 movie-item-style-1">
 					<%= image_tag("https://image.tmdb.org/t/p/original/#{top['results'][t]['poster_path']}") %>
 					<div class="hvr-inner">
-						<%= form_with url: "/more", method: :get do |form| %>
-							<%= form.hidden_field :post_id, :value => top['results'][t]['id'] %>
-							<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
-						<% end %>						  
+							<%= link_to "read more", more_url(:post_id => top['results'][t]['id']) %>						  					  
 					</div>
 					<div class="mv-item-infor">
 						<h6><a href="#">
@@ -162,10 +134,7 @@
 				<div class="movie-item-style-2 movie-item-style-1">
 				<%= image_tag("https://image.tmdb.org/t/p/original/#{trendingw['results'][tw]['poster_path']}") %>
 				<div class="hvr-inner">
-					<%= form_with url: "/more", method: :get do |form| %>
-						<%= form.hidden_field :post_id, :value => trendingw['results'][tw]['id'] %>
-						<%= form.submit "Read more" %><i class="ion-android-arrow-dropright"></i>
-					<% end %>						  
+				<%= link_to "read more", more_url(:post_id => trendingw['results'][tw]['id']) %>						  
 				</div>
 				<div class="mv-item-infor">
 					<h6><a href="#">

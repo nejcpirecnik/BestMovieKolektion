@@ -1,12 +1,5 @@
 
-
-<%= form_with url: "/news", method: :get do |form| %>
-    <%= form.label :query, "Search for:" %>
-    <%= form.text_field :query %>
-    <%= form.submit "Search", id:"search" %>
-  <% end %>
-
-  <% if params[:commit] == "Search" %>
+<%= render "layouts/navbar" %>
   <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
@@ -38,23 +31,29 @@
         <span></span>
     </div>
 </div>
-<%= render "layouts/navbar" %>
 <div class="page-single movie_list">
     <div class="container">
         <div class="row ipad-width2">
             <div class="col-md-10 col-sm-10 col-xs-10">
                 <div class="topbar-filter">
                 </div>
+                <%= form_with url: "/news", method: :get do |form| %>
+                    <%= form.label :query, "Search for:", style: "color: lightgrey;" %>
+                    <%= form.text_field :query %><br />
+                    <%= form.submit "Search", id:"search", style: "background-color: #dd003f; color: white; padding: 10px; border-radius: 4px; border: none; width: 10%; " %>
+                  <% end %>
+                <br />
+                  <% if params[:commit] == "Search" %>
                 <!--LOOP START HERE-->
                 <% responses = Faraday.get("https://api.themoviedb.org/3/search/movie?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&query=#{params[:query]}&page=1&include_adult=false") %>
                 <% search = JSON.parse(responses.body) %>
                 <% if search['results'] == [] %>
                 <br />
-                  <h1 style = "color:black;"> nc nebo </h1>
+                  <h1 style = "color:lightgrey;"> No results found </h1>
                 <% else %>
                 <% s = 0; %>
                 <% if search['total_results'] < 5 %>
-                    <p style="color:white;"> premalo rezultatov </p>
+                    <h1 style="color:white;"> Not enough results </h1>
                 <% else %>
                 <% while s <= 5 do %>
                 <div class="movie-item-style-2">
@@ -74,11 +73,11 @@
                 <% end %>
                 <% end %>
                 <% end %>
+                <% end %>
             </div>
         </div>
     </div>
 </div>
-
 <footer style="background-image: url(http://bmk.clovery.si/dest/images/uploads/sliderv2-background.png) !important;"
 	class="ht-footer">
 	<div class="container">
@@ -143,7 +142,6 @@
 <script src="js/custom.js"></script>
 </body>
 </html>
-<% end %>
 
 
   
