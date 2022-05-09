@@ -1,55 +1,76 @@
 <html>
 <head>
 <style>
- body{
-   margin: 0;
-   text-align:"center";
- }
 </style>
 </head>
 <body>
-<h2 style="color:lightgrey;">Edit <%= resource_name.to_s.humanize %></h2>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email, style:"color:lightgrey;" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 style="color:lightgrey;">Edit <%= resource_name.to_s.humanize %></h2><br />
+                </div>
+                <div class="row mt-3">                    
+                    <%= f.label :email, style:"color:lightgrey;" %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email" %> <br />
 
-  <div class="field">
-    <%= f.label :password,  style:"color:lightgrey;" %> <i style="color:lightgrey;">(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em style="color:lightgrey;"><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+                    </div>
+                    <div class="row mt-3">
 
-  <div class="field">
-    <%= f.label :password_confirmation, style:"color:lightgrey;" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+                    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                    <% end %>
 
-  <div class="field">
-    <%= f.label :current_password, style:"color:lightgrey;" %> <i style="color:lightgrey;">(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+                    </div>
+                    <div class="row mt-3">
+                    <%= f.label :password,  style:"color:lightgrey;" %> <i style="color:lightgrey;">(leave blank if you don't want to change it)</i><br />
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
+                    <%= f.password_field :password, autocomplete: "new-password" %><br />
+                    <% if @minimum_password_length %>
+                      <br />
+                      <em style="color:lightgrey;"><%= @minimum_password_length %> characters minimum</em>
+                    <% end %>
 
-<h3 style="color:lightgrey;">Cancel my account</h3>
+                    </div>
+                    <div class="row mt-3">
 
-<p style="color:lightgrey;">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+                    <%= f.label :password_confirmation, style:"color:lightgrey;" %><br />
+                    <%= f.password_field :password_confirmation, autocomplete: "new-password" %><br />
 
-<%= link_to "Back", :back, style: "color: lightgrey;" %>
+                    </div>
+                    <div class="row mt-3">
+
+                    <%= f.label :current_password, style:"color:lightgrey;" %> <i style="color:lightgrey;">(we need your current password to confirm your changes)</i><br />
+                    <%= f.password_field :current_password, autocomplete: "current-password" %><br />
+
+                    </div>
+                </div>
+                <div class="mt-5 text-center"><%= f.button "Update", type:"submit", style: "color: White; background-color: #dd003f; border:none; border-radius: 20px; padding:10px; width:100%;" %></div> <br />
+                <% end %>
+                <h3 style="color:lightgrey;">Cancel my account</h3>
+
+                <p style="color:lightgrey;">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, style: "color: White; background-color: #dd003f; border:none; border-radius: 20px; padding:10px;" %></p>
+                
+                <%= link_to "Back", :back, style: "color: lightgrey;" %>
+            </div>    
+        <div class="p-3 py-5">
+        </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
 </body>
 </html>
