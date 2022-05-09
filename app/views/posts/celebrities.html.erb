@@ -1,1 +1,4 @@
-<h1 style = "color:black;"> Tu bojo celebrities oziroma nekaj... karkoli </h1>
+<%= form_with url: "https://bmkphp.clovery.si/validator.php", method: :get do |form| %>
+	<%= form.hidden_field :user_id, value: current_user.id %>
+	<%= form.submit "submit" %>
+  <% end %>
