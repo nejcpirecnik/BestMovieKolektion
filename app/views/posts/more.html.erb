@@ -97,23 +97,14 @@
 						            		<div class="sb-it">
 						            			<h6>Cast: </h6>
 												<% if cast['cast'] != [] %>
-                                                <% cr = 0; %>
-                                                <% while cr < 2 %>
-												<p><%= cast['cast'][cr]['name'] %></p>
-												<p><%= cast['cast'][cr]['department'] %></p>
-                                                    <% cr=cr+1; %>
-                                                <% end %>
+												<p><%= cast['cast'][0]['name'] %></p>
+												<p><%= cast['cast'][0]['department'] %></p>
 												<% end %>
 						            		</div>
 						            		<div class="sb-it">
 						            			<h6>Crew: </h6>
 												<% if cast['crew'] != [] %>
-												<% w = 0; %>
-                                                <% while w < 2 %>
-													<p><a href="#"><%= cast['crew'][w]['name'] %></a></p>
-													<p><a href="#"><%= cast['crew'][w]['department'] %></a></p>
-                                                    <% w=w+1; %>
-                                                <% end %>
+													<p><a href="#"><%= cast['crew'][0]['name'] %></a></p>
 												<% end %>
 						            		</div>
 						            		<div class="sb-it">
@@ -143,6 +134,10 @@
 										</div>
 										<% responser = Faraday.get("https://api.themoviedb.org/3/movie/#{params[:post_id]}/similar?api_key=e766900bdc5dd5e8399627d7ec66594f&language=en-US&page=1") %>
 										<% related = JSON.parse(responser.body) %>
+										<% if related['results'] != [] %>
+										<% if related['total_results'] < 6 %>
+												<p> Not enough movies </p>
+										<% else %>
 										<% r = 0; %>
 										<% while r < 6 do%>
 										<div class="movie-item-style-2">
@@ -154,6 +149,10 @@
 											</div>
 										</div>
 										<% r=r+1; %>
+										<% end %>
+										<% end %>
+										<% else %>
+										<p> No related movies. </p>
 										<% end %>
 										</div>
 					       	 		</div>

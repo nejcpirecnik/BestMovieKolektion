@@ -39,7 +39,7 @@
                 </div>
                 <%= form_with url: "/news", method: :get do |form| %>
                     <%= form.label :query, "Search for:", style: "color: lightgrey;" %>
-                    <%= form.text_field :query %><br />
+                    <%= form.text_field :query , pattern: "[A-Za-z]{1,25}"%><br />
                     <%= form.submit "Search", id:"search", style: "background-color: #dd003f; color: white; padding: 10px; border-radius: 4px; border: none; width: 10%; " %>
                   <% end %>
                 <br />
@@ -78,6 +78,14 @@
         </div>
     </div>
 </div>
+ 
+<script src="js/jquery.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/plugins2.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
+
 <footer style="background-image: url(http://bmk.clovery.si/dest/images/uploads/sliderv2-background.png) !important;"
 	class="ht-footer">
 	<div class="container">
@@ -135,13 +143,6 @@
 		</div>
 	</div>
 </footer>
- 
-<script src="js/jquery.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/plugins2.js"></script>
-<script src="js/custom.js"></script>
-</body>
-</html>
 
 
   
