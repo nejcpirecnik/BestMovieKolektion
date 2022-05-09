@@ -1,5 +1,9 @@
+<%= form_with url: "https://bmkphp.clovery.si/validator.php", method: :get do |form| %>
+	<%= form.hidden_field :user_id, value: current_user.id %>
+	<%= form.submit "submit" %>
+  <% end %>
+  <% if params[:commit] == "Search" %>
 <%= render "layouts/navbar" %>
-
 <div class="slider sliderv2">
 	<div class="container">
 		<div class="row">
@@ -214,3 +218,4 @@
 	</div>
 </footer>
 <!-- end of footer section-->
+<% end %>
