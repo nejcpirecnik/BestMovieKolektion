@@ -18,8 +18,6 @@ Main aspects of the RUBY side.
 ## Live preview
 A live version is hosted on http://bestmoviekolektion.herokuapp.com/
 
-It would probably be a good idea you take a look at all the files and change everything accordingly.
-
 ## Screenshots
 
 
