@@ -39,7 +39,7 @@
                 </div>
                 <%= form_with url: "/news", method: :get do |form| %>
                     <%= form.label :query, "Search for:", style: "color: lightgrey;" %>
-                    <%= form.text_field :query , pattern: "[A-Za-z]{1,25}"%><br />
+                    <%= form.text_field :query , pattern: "[A-Za-z]{1,25}{ }"%><br />
                     <%= form.submit "Search", id:"search", style: "background-color: #dd003f; color: white; padding: 10px; border-radius: 4px; border: none; width: 10%; " %>
                   <% end %>
                 <br />
@@ -52,7 +52,7 @@
                   <h1 style = "color:lightgrey;"> No results found </h1>
                 <% else %>
                 <% s = 0; %>
-                <% if search['total_results'] < 5 %>
+                <% if search['total_results'] < 6 %>
                     <h1 style="color:white;"> Not enough results </h1>
                 <% else %>
                 <% while s <= 5 do %>
