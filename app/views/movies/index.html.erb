@@ -1,1 +1,33 @@
-<p>page dela</p>
+
+<h1 , style= "color:white;">Movies</h1>
+<%=
+  link_to 'Download as Excel',
+  movies_path(format: :xlsx), style: "color:white;"
+%>
+<%=
+  link_to 'Upload from Excel',
+  new_movies_import_path, style: "color:white;"
+%>
+
+
+<table>
+  <thead>
+    <tr>
+      <th style="color:White;">Name</th>
+      <th style="color:White;">description</th>
+      <th style="color:White;">rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td style="color:White;"><%= movie.name %></td>
+        <td style="color:White;"><%= movie.description %></td>
+        <td style="color:White;"><%= movie.rating %></td>
+        <td style="color:White;"><%= link_to 'Show', movie %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
