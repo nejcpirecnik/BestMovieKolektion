@@ -20,9 +20,14 @@ A live version is hosted on http://bestmoviekolektion.herokuapp.com/
 
 ## Screenshots
 
+![index](https://user-images.githubusercontent.com/64775093/167565207-4427d3ac-dc85-4307-a407-a68329bae828.png)
 
-## Final thoughts
-This was a pain.
+![register](https://user-images.githubusercontent.com/64775093/167565994-509b63af-1f3f-4755-abcb-012d9a46dda4.png)
+
+![more](https://user-images.githubusercontent.com/64775093/167565986-d7931700-0373-43a9-8a30-b1cb72dbeb2e.png)
+
+![login](https://user-images.githubusercontent.com/64775093/167565977-eb7525e7-d463-4064-b7a0-f3595fead0e9.png)
+
 
 ## Credits
 ##### [Nejc Pirečnik](https://github.com/nejcpirecnik) PHP side
