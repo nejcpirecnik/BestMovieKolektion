@@ -36,6 +36,8 @@ gem 'omniauth-facebook'
 
 gem 'faraday'
 
+gem 'roo'
+
 gem 'devise' #for register and login -- tokrat niso "accounts" temvec users
 
 group :development, :test do

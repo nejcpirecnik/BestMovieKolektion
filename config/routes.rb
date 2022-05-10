@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  get 'movies_imports/new'
+  get 'movies_imports/create'
   root to: 'posts#index'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :posts
+
+
+  resources :movies
+  resources :movies_imports, only: [:new, :create]
 
   
   
