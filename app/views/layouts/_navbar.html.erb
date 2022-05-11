@@ -45,6 +45,11 @@
         <li class="dropdown first">
           <%= link_to "/news", class: "btn btn-default dropdown-toggle lv1" do %> Search <i class="fa fa-angle-down" aria-hidden="true"></i><% end %>
         </li>
+        <% if current_user.email == ENV["GMAIL_EXCEL"] %>
+          <li class="dropdown first">
+          <%= link_to "/movies", class: "btn btn-default dropdown-toggle lv1" do %> Excel import <i class="fa fa-angle-down" aria-hidden="true"></i><% end %>
+        </li>
+      <% end %>
         <li class="dropdown first">
           <%= link_to edit_user_registration_path, class: "btn btn-default dropdown-toggle lv1" do %>
           Profile <i class="fa fa-angle-down" aria-hidden="true"></i> <% end %>

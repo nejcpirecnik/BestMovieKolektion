@@ -7,6 +7,7 @@ class MoviesImport
     def initialize(attributes={})
       attributes.each { |name, value| send("#{name}=", value) }
       attributes.each { |description, value| send("#{description}=", value) }
+      attributes.each { |image, value| send("#{image}=", value) }
       attributes.each { |rating, value| send("#{rating}=", value) }
 
     end
